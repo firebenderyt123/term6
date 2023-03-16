@@ -1,6 +1,4 @@
-from scipy.integrate import odeint
 import numpy as np
-
 
 class BPLA:
 
@@ -11,7 +9,7 @@ class BPLA:
     def __init__(
             self,
             I, m, dt, J, J0, Kf, Kf0,  # noqa
-            Km, Km0, p, G, dH,
+            Km, Km0, p, G, Ks,
             state
             ):
         self.t = 0.0
@@ -26,8 +24,11 @@ class BPLA:
         self.Km0 = Km0
         self.p = p
         self.G = G
-        self.dH = dH
+        self.Ks = Ks
         self.state = state  # стан беспілотника
+
+        # Вектор локальної похідної кінетичного моменту двигунів
+        self.dH = np.array([0.0, 0.0, 0.0])
 
         # Рівнодіючs силb тяги двигунів у проекціях на осі ІСК
         self.Fe = np.array([0.0, 0.0, 0.0])
@@ -45,12 +46,15 @@ class BPLA:
         self.MAe = np.array([0.0, 0.0, 0.0])
 
     def launch(self):
-        self.next_step()
-        self.calc_new_state()
+        np.seterr(all='raise')
+        for i in range(int(50 / self.dt)):  # 50 cек
+            self.next_step()
+            self.calc_new_state()
+            print(i)
 
     # Функція, що повертає похідні від вектора стану
-    def state_dot(self, state, t):
-        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, eps0, eps1, eps2, eps3, eps4, eps5 = state  # noqa
+    def state_dot(self, state):
+        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = state  # noqa
 
         # розрахунок похідних
         x_dot = vx
@@ -71,6 +75,8 @@ class BPLA:
         omega4_dot = eps4
         omega5_dot = eps5
 
+        print(Om_dot)
+
         return np.array([
             x_dot,
             y_dot,
@@ -89,28 +95,28 @@ class BPLA:
             omega2_dot,
             omega3_dot,
             omega4_dot,
-            omega5_dot
-        ])
+            omega5_dot,
+            eps0,
+            eps1,
+            eps2,
+            eps3,
+            eps4,
+            eps5
+        ], dtype=np.float64)
 
     def next_step(self):
         self.t += self.dt
 
         # чисельне інтегрування
-        new_state_dot = BPLA.euler_integration(self.state_dot, self.state, self.dt, self.t + self.dt)[0]  # noqa
+        new_state_dot = BPLA.euler_integration(self.state_dot, self.state, [self.t, self.t + self.dt], self.dt)  # noqa
 
-        test_state_dot = odeint(self.state_dot, self.state, [self.t + self.dt])[0]  # noqa
-
-        if test_state_dot.all() == new_state_dot.all():
-            print('equal')
-        else:
-            print('not equal', test_state_dot)
-
-        print(new_state_dot)
+        self.prev_state = self.state
+        self.state = new_state_dot
 
     def calc_new_state(self):
-        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5 = self.state # noqa
+        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = self.state # noqa
 
-        # 1 wrong
+        # 1
         # Вектори сили тяги двигунів
         F = np.array([
             self.Kf0 * omega0 ** 2 * self.e2,
@@ -120,7 +126,7 @@ class BPLA:
             self.Kf * omega4 ** 2 * self.e2,
             self.Kf * omega5 ** 2 * self.e3
         ])
-        Fez = np.sum(F, axis=1)  # Сумарний вектор
+        Fe_zsk = np.sum(F, axis=0)  # Сумарний вектор
 
         # кватерніон орієнтації ЗСК відносно ІСК
         q_psi = np.array([
@@ -142,42 +148,61 @@ class BPLA:
             0
         ])
 
-        q = np.multiply(q_psi, q_teta, q_gamma)
+        Lam = np.multiply(q_psi, q_teta, q_gamma)
 
         # 4
-        Phiez = np.array([0, Fez])
-        # print(q, Phiez, np.array([q[0], -q[1], -q[2], -q[3]]))
-        self.Fe = q * Phiez * np.array([q[0], -q[1], -q[2], -q[3]])
+        Phiez = np.hstack([0, Fe_zsk])
+        Lam_inv = BPLA.quat_inverse(Lam)
+        self.Fe = BPLA.vect(  # ???
+            BPLA.quat_mult(
+                BPLA.quat_mult(Lam, Phiez),
+                Lam_inv
+             )
+        )
 
         # 5
-        # vx =
-        # Fsick =
+        v_zsk = BPLA.quat_mult(
+            BPLA.quat_mult(
+                Lam_inv,
+                np.array([0, vx, vy, vz])
+            ),
+            Lam
+         )
 
-        self.Fs = [
-            -self.Ks[0] * vx ** 2 * np.sign(vx),
-            -self.Ks[1] * vy ** 2 * np.sign(vy),
-            -self.Ks[2] * vz ** 2 * np.sign(vz)
-        ]
+        Fs_zsk = np.array([
+            0,  # ???
+            -self.Ks[0] * v_zsk[0] ** 2 * np.sign(v_zsk[0]),
+            -self.Ks[1] * v_zsk[1] ** 2 * np.sign(v_zsk[1]),
+            -self.Ks[2] * v_zsk[2] ** 2 * np.sign(v_zsk[2])
+        ])
+        self.Fs = BPLA.vect(  # ???
+            BPLA.quat_mult(
+                BPLA.quat_mult(Lam, Fs_zsk),
+                Lam_inv
+            )
+        )
 
         # 6
 
         # Вектор сумарного кінетичного моменту «МК + ротори з гвинтами»
-        H = [
+        H = np.array([
             self.I[0] * Om1,
-            self.I[1] * Om2 + self.J(omega1 - omega2 + omega3 - omega4) + self.J0 * omega0,  # noqa
+            self.I[1] * Om2 + self.J * (omega1 - omega2 + omega3 - omega4) + self.J0 * omega0,  # noqa
             self.I[2] * Om3 + self.J * omega5
-        ]
+        ])
 
-        self.Mg = np.cross(np.array([Om1, Om2, Om3]), H)  # векторний доб
+        Om = np.array([Om1, Om2, Om3])
+
+        self.Mg = np.cross(Om, H)  # векторний доб
 
         # 7
-        self.dH = [
+        self.dH = np.array([  # ??? eps
             0,
-            self.J * (self.eps[1] - self.eps[2] + self.eps[3] - self.eps[4]) + self.J[0] * self.eps[0],  # noqa
-            self.J * self.eps[5]
-        ]
+            self.J * (eps1 - eps2 + eps3 - eps4) + self.J0 * eps0,  # noqa
+            self.J * eps5
+        ])
 
-        # 8
+        # 8 ??? двигунів 5, а сил 6
         self.MFe = np.sum(np.cross(self.p, F), axis=0)
 
         # 9
@@ -193,24 +218,52 @@ class BPLA:
         ])
 
         # 10
-        self.MAe = np.sum(Ma)
+        self.MAe = np.sum(Ma, axis=0)
 
     @staticmethod
-    def euler_integration(f, x0, h, xn):
+    def vect(a):
+        """
+        a: кватерніон
+        return: 3-х мірний вектор
+        """
+        return a[1:]
+
+    @staticmethod
+    def quat_mult(a, b):
+        """
+        Множення кватерніонів
+        a: кватерніон
+        b: кватерніон
+        return: кватерніон
+        """
+        q0 = a[0] * b[0] - a[1] * b[1] - a[2] * b[2] - a[3] * b[3]
+        q1 = a[0] * b[1] + a[1] * b[0] + a[2] * b[3] - a[3] * b[2]
+        q2 = a[0] * b[2] + a[2] * b[0] + a[3] * b[1] - a[1] * b[3]
+        q3 = a[0] * b[3] + a[3] * b[0] + a[1] * b[2] - a[2] * b[1]
+
+        return np.array([q0, q1, q2, q3])
+
+    @staticmethod
+    def quat_inverse(a):
+        """
+        Інверсія кватерніону
+        a: кватерніон
+        return: кватерніон
+        """
+        return np.array([a[0], -a[1], -a[2], -a[3]])
+
+    @staticmethod
+    def euler_integration(f, state, time_span, time_step):
         """
         f: функція правої частини диференціального рівняння
-        x0: початкове значення змінної x
-        h: крок інтегрування
-        xn: кінцеве значення змінної x
+        state: початкове значення стану
+        time_span: проміжок часу
+        time_step: крок інтегрування
         return: масив значень y на кожному кроці інтегрування
         """
-        n = int((xn - x0[0]) / h) + 1
-        y = np.zeros((n, len(x0)))
-        y[0] = x0
-        x = x0[0]
+        num_steps = int((time_span[1] - time_span[0]) / time_step) + 1
+        for i in range(num_steps - 1):
+            state_derivative = f(state)
+            state += state_derivative * time_step
 
-        for i in range(1, n):
-            y[i] = y[i-1] + h * f(y[i-1], x)
-            x += h
-
-        return y
+        return state
