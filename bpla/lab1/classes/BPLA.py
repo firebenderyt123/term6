@@ -44,7 +44,9 @@ class BPLA:
         # Cумарний аеродинамічний момент від шести двигунів
         self.MAe = np.array([0.0, 0.0, 0.0])
 
+    def launch(self):
         self.next_step()
+        self.calc_new_state()
 
     # Функція, що повертає похідні від вектора стану
     def state_dot(self, state, t):
@@ -108,27 +110,44 @@ class BPLA:
     def calc_new_state(self):
         x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5 = self.state # noqa
 
-        # 1
+        # 1 wrong
         # Вектори сили тяги двигунів
         F = np.array([
-            self.Kf0 * self.omega0 ** 2 * self.e2,
-            self.Kf * self.omega1 ** 2 * self.e2,
-            self.Kf * self.omega2 ** 2 * self.e2,
-            self.Kf * self.omega3 ** 2 * self.e2,
-            self.Kf * self.omega4 ** 2 * self.e2,
-            self.Kf * self.omega5 ** 2 * self.e3
+            self.Kf0 * omega0 ** 2 * self.e2,
+            self.Kf * omega1 ** 2 * self.e2,
+            self.Kf * omega2 ** 2 * self.e2,
+            self.Kf * omega3 ** 2 * self.e2,
+            self.Kf * omega4 ** 2 * self.e2,
+            self.Kf * omega5 ** 2 * self.e3
         ])
-        Fez = np.sum(F)  # Сумарний вектор
+        Fez = np.sum(F, axis=1)  # Сумарний вектор
 
         # кватерніон орієнтації ЗСК відносно ІСК
-        q_psi = np.array([np.cos(psi/2), 0, -np.sin(psi/2), 0])
-        q_teta = np.array([np.cos(teta/2), 0, 0, np.sin(teta/2)])
-        q_gamma = np.array([np.cos(gamma/2), np.sin(gamma/2), 0, 0])
-        q = q_psi @ q_teta @ q_gamma
+        q_psi = np.array([
+            np.cos(psi/2),
+            0,
+            -np.sin(psi/2),
+            0
+        ])
+        q_teta = np.array([
+            np.cos(teta/2),
+            0,
+            0,
+            np.sin(teta/2)
+        ])
+        q_gamma = np.array([
+            np.cos(gamma/2),
+            np.sin(gamma/2),
+            0,
+            0
+        ])
+
+        q = np.multiply(q_psi, q_teta, q_gamma)
 
         # 4
-        Phiez = np.hstack([0, Fez])
-        self.Fe = q * Phiez * np.conj(q)
+        Phiez = np.array([0, Fez])
+        # print(q, Phiez, np.array([q[0], -q[1], -q[2], -q[3]]))
+        self.Fe = q * Phiez * np.array([q[0], -q[1], -q[2], -q[3]])
 
         # 5
         # vx =

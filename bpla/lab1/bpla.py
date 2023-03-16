@@ -79,8 +79,9 @@ def start_bpla():
         eps5
     ])
 
-    BPLA(
+    bpla = BPLA(
         I, m, dt, J, J0, Kf, Kf0, Km, Km0, p, G,
         np.array([dH1, dH2, dH3]),
         state
     )
+    bpla.launch()
