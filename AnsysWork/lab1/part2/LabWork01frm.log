@@ -1,0 +1,352 @@
+/BATCH  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       10:14:30
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+/PREP7  
+K,1,0,0,0,  
+K,2,0.15,0,0,   
+K,3,0.40,0,0,   
+K,4,0.5,0,0,
+K,5,0,0.3,0,
+K,5,0,0.3,0,
+SAVE
+L,       1,       2 
+L,       2,       3 
+L,       3,       4 
+L,       1,       5 
+L,       5,       4 
+LLIST,ALL, , ,  
+/UNITS, Si  
+KPLOT   
+LPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+klist,all   
+KL,       5,  0.3169523313537163
+KL,       5,  0.8064780259659770
+L,       1,       6 
+L,       6,       2 
+FLST,2,2,4,ORDE,2   
+FITEM,2,6   
+FITEM,2,-7  
+LDELE,P51X  
+/REPLOT 
+klist,all   
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+KPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+LLIST,ALL, , ,  
+LPLOT   
+KPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+/REPLOT 
+FLST,2,2,3,ORDE,2   
+FITEM,2,6   
+FITEM,2,-7  
+KDELE,P51X  
+LPLOT   
+klist,all,,,coord   
+!*  
+LANG,       1,       2,90, ,
+LLIST,ALL, , ,  
+klist,all   
+KL,       5,  0.2985679137016466
+L,       1,       6 
+L,       6,       2 
+FLST,2,1,3  
+FITEM,2,6   
+FLST,2,2,4,ORDE,2   
+FITEM,2,6   
+FITEM,2,-7  
+LDELE,P51X  
+KDELE,       6  
+/REPLOT 
+LLIST,ALL, , ,  
+!*  
+KL,5,0,2,   
+!*  
+KL,5,1,2,   
+!*  
+KL,5,5,2,   
+klist,all   
+LLIST,ALL, , ,  
+LANG,       1,       2,90, ,
+LANG,       5,       1,90, ,
+LDELE,       7  
+KDELE,       6  
+LPLOT   
+KDELE,       6  
+klist,all   
+LLIST,ALL, , ,  
+LPLOT   
+FLST,2,2,4,ORDE,2   
+FITEM,2,5   
+FITEM,2,-6  
+LDELE,P51X  
+KDELE,       6  
+L,       5,       4 
+LANG,       5,       2,90, ,
+LDELE,       7  
+FLST,2,2,4,ORDE,2   
+FITEM,2,5   
+FITEM,2,-6  
+LDELE,P51X  
+KDELE,       6  
+L,       5,       4 
+SAVE
+/REPLOT 
+L2ANG,       5,       1,90,90   
+!*  
+!*  
+LANG,5,2,90, ,  
+FLST,2,3,4,ORDE,2   
+FITEM,2,5   
+FITEM,2,-7  
+LDELE,P51X  
+KDELE,       6  
+/REPLOT,RESIZE  
+L,       5,       4 
+/REPLOT,RESIZE  
+SAVE
+!*  
+L2ANG,1,5,90,,,,
+klist,all   
+LLIST,ALL, , ,  
+K,6,0.0427,0.2427,0,
+KDELE,       6  
+LLIST,ALL, , ,  
+/REPLOT 
+L2ANG,       1,       5,90,90   
+L2ANG,       5,       1,90,90   
+!*  
+!*  
+!*  
+!*  
+LANG,1,2,90, ,  
+!*  
+!*  
+LANG,4,2,180, , 
+!*  
+L2ANG,4,5,180,,,,   
+alist, all  
+LLIST,ALL, , ,  
+klist,all,,,coord   
+!*  
+!*  
+LTAN,5,2,,,,
+LDELE,       6  
+LPLOT   
+/REPLOT 
+K,8,0.15,0,0,   
+/REPLOT 
+KPLOT   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+LPLOT   
+K,8,0.15,0.3,0, 
+K,9,0.4,0.3,0,  
+K,10,0.5,0.3,0, 
+K,10,0.5,0.3,0, 
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/AUTO,1 
+/REP,FAST   
+KPLOT   
+LPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+LPLOT   
+KPLOT   
+LSTR,       5,       8  
+LSTR,       8,       9  
+LPLOT   
+L,       2,       8 
+!*  
+KL,8,5,6,   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+KDELE,       6  
+LPLOT   
+!*  
+!*  
+KL,5,0.3,6, 
+FLST,2,3,4,ORDE,2   
+FITEM,2,6   
+FITEM,2,-8  
+LDELE,P51X  
+FLST,2,3,3,ORDE,2   
+FITEM,2,8   
+FITEM,2,-10 
+KDELE,P51X  
+LLIST,ALL, , ,  
+klist,all   
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+LPLOT   
+!*  
+KL,5,0.8,7, 
+LDELE,       5  
+KPLOT   
+L,       5,       6 
+L,       6,       7 
+L,       7,       4 
+L,       6,       2 
+L,       7,       3 
+L,       1,       6 
+L,       2,       7 
+LPLOT   
+FLST,2,3,4,ORDE,2   
+FITEM,2,5   
+FITEM,2,-7  
+LDELE,P51X  
+L,       5,       4 
+/REPLOT 
+/PNUM,KP,1  
+/PNUM,LINE,0
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+/PNUM,KP,1  
+/PNUM,LINE,0
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+SAVE
+SAVE
+SAVE
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+LLIST,ALL, , ,  
+SAVE
+FINISH  
+! /EXIT,ALL 
