@@ -1,4 +1,6 @@
 import numpy as np
+from math import sqrt
+
 
 class BPLA:
 
@@ -50,7 +52,7 @@ class BPLA:
         for i in range(int(50 / self.dt)):  # 50 cек
             self.next_step()
             self.calc_new_state()
-            print(i)
+            print(self.t)
 
     # Функція, що повертає похідні від вектора стану
     def state_dot(self, state):
@@ -64,7 +66,7 @@ class BPLA:
 
         psi_dot = (Om3 * np.sin(gamma) - Om2 * np.cos(gamma)) / np.cos(teta) # noqa
         teta_dot = Om2 * np.sin(gamma) + Om3 * np.cos(gamma)
-        gamma_dot = Om1 + np.tan(teta) * (Om3 * np.sin(gamma) - Om3 * np.cos(gamma)) # noqa
+        gamma_dot = Om1 + np.tan(teta) * (Om3 * np.sin(gamma) - Om2 * np.cos(gamma)) # noqa
 
         Om_dot = (-self.Mg - self.dH + self.MFe + self.MAe) / self.I
 
@@ -75,7 +77,7 @@ class BPLA:
         omega4_dot = eps4
         omega5_dot = eps5
 
-        print(Om_dot)
+        print(Om_dot, self.Mg, self.dH, self.MFe, self.MAe, self.I)
 
         return np.array([
             x_dot,
@@ -126,29 +128,35 @@ class BPLA:
             self.Kf * omega4 ** 2 * self.e2,
             self.Kf * omega5 ** 2 * self.e3
         ])
+
         Fe_zsk = np.sum(F, axis=0)  # Сумарний вектор
 
         # кватерніон орієнтації ЗСК відносно ІСК
-        q_psi = np.array([
+        Lam_psi = np.array([
             np.cos(psi/2),
             0,
             -np.sin(psi/2),
             0
         ])
-        q_teta = np.array([
+        Lam_teta = np.array([
             np.cos(teta/2),
             0,
             0,
             np.sin(teta/2)
         ])
-        q_gamma = np.array([
+        Lam_gamma = np.array([
             np.cos(gamma/2),
             np.sin(gamma/2),
             0,
             0
         ])
 
-        Lam = np.multiply(q_psi, q_teta, q_gamma)
+        # Lam1 = np.multiply(Lam_psi, Lam_teta, Lam_gamma)
+
+        Lam = BPLA.quat_mult(
+            BPLA.quat_mult(Lam_psi, Lam_teta),
+            Lam_gamma
+        )
 
         # 4
         Phiez = np.hstack([0, Fe_zsk])
@@ -195,8 +203,10 @@ class BPLA:
 
         self.Mg = np.cross(Om, H)  # векторний доб
 
+        print(Om, H)
+
         # 7
-        self.dH = np.array([  # ??? eps
+        self.dH = np.array([
             0,
             self.J * (eps1 - eps2 + eps3 - eps4) + self.J0 * eps0,  # noqa
             self.J * eps5
@@ -221,12 +231,12 @@ class BPLA:
         self.MAe = np.sum(Ma, axis=0)
 
     @staticmethod
-    def vect(a):
+    def vect(q):  # ???
         """
-        a: кватерніон
+        q: кватерніон
         return: 3-х мірний вектор
         """
-        return a[1:]
+        return q[1:]
 
     @staticmethod
     def quat_mult(a, b):
@@ -244,13 +254,13 @@ class BPLA:
         return np.array([q0, q1, q2, q3])
 
     @staticmethod
-    def quat_inverse(a):
+    def quat_inverse(q):
         """
         Інверсія кватерніону
-        a: кватерніон
+        q: кватерніон
         return: кватерніон
         """
-        return np.array([a[0], -a[1], -a[2], -a[3]])
+        return np.array([q[0], -q[1], -q[2], -q[3]])
 
     @staticmethod
     def euler_integration(f, state, time_span, time_step):
