@@ -1,0 +1,241 @@
+/BATCH  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:33:06
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+/UNITS, Si  
+*AFUN,DEG   
+*AFUN,DEG   
+/SOLU   
+FINISH  
+/PREP7  
+K,1,-0.0675,-0.15,0,
+K,2,0.0675,-0.15,0, 
+K,3,-0.0675,0.15,0, 
+K,4,0.0675,0.15,0,  
+K,5,0.0675,-0.1398,0,   
+K,6,0.0675,-0.1398,0,   
+K,5,0.00325,-0.1398,0,  
+K,7,0.00325,0.1398,0,   
+K,8,0.0675,0.1398,0,
+K,9,-0.00325,-0.1398,0, 
+K,10,-0.0675,-0.1398,0, 
+K,11,-0.00325,0.1398,0, 
+K,12,-0.0675,0.1398,0,  
+K,13,0.0354,-0.1398,0,  
+K,14,0.0354,0.1398,0,   
+K,15,-0.0354,-0.1398,0, 
+K,16,-0.0354,0.1398,0,  
+K,16,-0.0354,0.1398,0,  
+SAVE
+LSTR,       1,       2  
+LSTR,       3,       4  
+LSTR,       1,      10  
+LSTR,      10,      15  
+LSTR,      15,       9  
+LSTR,       9,      11  
+LSTR,      11,      16  
+LSTR,      16,      12  
+LSTR,      12,       3  
+LSTR,       4,       8  
+LSTR,       8,      14  
+LSTR,      14,       7  
+LSTR,       7,       5  
+LSTR,       5,      13  
+LSTR,      13,       6  
+LSTR,       6,       2  
+!*  
+!*  
+LANG,16,13,78, ,
+!*  
+!*  
+LANG,16,13,102, ,   
+!*  
+!*  
+LANG,13,13,102, ,   
+!*  
+!*  
+LANG,13,13,78, ,
+!*  
+!*  
+LANG,3,15,78, , 
+!*  
+!*  
+LANG,6,15,78, , 
+!*  
+!*  
+LANG,6,15,102, ,
+!*  
+!*  
+LANG,9,16,102, ,
+!*  
+!*  
+LANG,23,16,102, ,   
+!*  
+!*  
+LANG,23,16,78, ,
+!*  
+!*  
+LANG,13,14,78, ,
+!*  
+!*  
+LANG,13,14,102, ,   
+!*  
+!*  
+LANG,10,14,102, ,   
+!*  
+!*  
+LANG,10,14,78, ,
+/REPLOT,RESIZE  
+LPLOT   
+FLST,2,16,4,ORDE,8  
+FITEM,2,4   
+FITEM,2,-9  
+FITEM,2,11  
+FITEM,2,-16 
+FITEM,2,19  
+FITEM,2,21  
+FITEM,2,27  
+FITEM,2,31  
+LDELE,P51X  
+GPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,1
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+/PNUM,KP,1  
+/PNUM,LINE,1
+/PNUM,AREA,1
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+FLST,2,8,3,ORDE,2   
+FITEM,2,5   
+FITEM,2,-12 
+KDELE,P51X  
+GPLOT   
+!*  
+LFILLT,28,23,0.012, ,   
+!*  
+LFILLT,30,29,0.012, ,   
+!*  
+LFILLT,24,23,0.012, ,   
+!*  
+LFILLT,20,29,0.012, ,   
+!*  
+LFILLT,26,25,0.005, ,   
+!*  
+LFILLT,26,25,0.0045, ,  
+!*  
+LFILLT,26,25,0.0043, ,  
+!*  
+LFILLT,26,25,0.004, ,   
+!*  
+LFILLT,32,10,0.004, ,   
+!*  
+LFILLT,17,18,0.004, ,   
+!*  
+LFILLT,22,3,0.004, ,
+SAVE
+FLST,2,23,4 
+FITEM,2,8   
+FITEM,2,26  
+FITEM,2,28  
+FITEM,2,4   
+FITEM,2,23  
+FITEM,2,6   
+FITEM,2,24  
+FITEM,2,22  
+FITEM,2,12  
+FITEM,2,1   
+FITEM,2,11  
+FITEM,2,18  
+FITEM,2,20  
+FITEM,2,7   
+FITEM,2,29  
+FITEM,2,5   
+FITEM,2,30  
+FITEM,2,32  
+FITEM,2,9   
+FITEM,2,10  
+FITEM,2,2   
+FITEM,2,25  
+FITEM,2,3   
+AL,P51X 
+FLST,2,23,4 
+FITEM,2,28  
+FITEM,2,26  
+FITEM,2,8   
+FITEM,2,25  
+FITEM,2,2   
+FITEM,2,10  
+FITEM,2,9   
+FITEM,2,32  
+FITEM,2,30  
+FITEM,2,5   
+FITEM,2,29  
+FITEM,2,7   
+FITEM,2,20  
+FITEM,2,18  
+FITEM,2,11  
+FITEM,2,17  
+FITEM,2,1   
+FITEM,2,3   
+FITEM,2,12  
+FITEM,2,22  
+FITEM,2,24  
+FITEM,2,6   
+FITEM,2,23  
+AL,P51X 
+FLST,2,24,4 
+FITEM,2,1   
+FITEM,2,12  
+FITEM,2,3   
+FITEM,2,22  
+FITEM,2,24  
+FITEM,2,6   
+FITEM,2,23  
+FITEM,2,4   
+FITEM,2,28  
+FITEM,2,26  
+FITEM,2,8   
+FITEM,2,25  
+FITEM,2,2   
+FITEM,2,10  
+FITEM,2,9   
+FITEM,2,32  
+FITEM,2,30  
+FITEM,2,5   
+FITEM,2,29  
+FITEM,2,11  
+FITEM,2,17  
+FITEM,2,18  
+FITEM,2,20  
+FITEM,2,7   
+AL,P51X 
+SAVE
+GPLOT   
+ASUM, FINE  
+SAVE
+FINISH  
+! /EXIT,ALL 

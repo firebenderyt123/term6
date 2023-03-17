@@ -1,0 +1,54 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:33:04
+
+ *** ERROR ***                           CP =       4.321   TIME= 22:43:46
+ Cannot find line that would intersect line 16 at 78 degrees.            
+
+ *** ERROR ***                           CP =       4.368   TIME= 22:43:49
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       4.540   TIME= 22:44:06
+ Cannot find line that would intersect line 13 at 102 degrees.           
+
+ *** ERROR ***                           CP =       4.540   TIME= 22:44:08
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       4.711   TIME= 22:44:31
+ Cannot find line that would intersect line 6 at 78 degrees.             
+
+ *** ERROR ***                           CP =       4.742   TIME= 22:44:32
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       4.898   TIME= 22:44:48
+ Cannot find line that would intersect line 23 at 102 degrees.           
+
+ *** ERROR ***                           CP =       4.930   TIME= 22:44:49
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       5.039   TIME= 22:45:00
+ Cannot find line that would intersect line 13 at 78 degrees.            
+
+ *** ERROR ***                           CP =       5.070   TIME= 22:45:00
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       5.226   TIME= 22:45:09
+ Cannot find line that would intersect line 10 at 102 degrees.           
+
+ *** ERROR ***                           CP =       5.257   TIME= 22:45:10
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       7.238   TIME= 22:48:24
+ Fillet is not possible.                                                 
+
+ *** ERROR ***                           CP =       7.348   TIME= 22:48:37
+ Fillet is not possible.                                                 
+
+ *** ERROR ***                           CP =       7.441   TIME= 22:48:42
+ Fillet is not possible.                                                 
+
+ *** ERROR ***                           CP =       8.081   TIME= 22:49:40
+ Keypoint 2 is referenced by only one line.  Improperly connected line   
+ set for AL command.                                                     
+
+ *** ERROR ***                           CP =       8.159   TIME= 22:50:01
+ Keypoint 5 is referenced by only one line.  Improperly connected line   
+ set for AL command.                                                     

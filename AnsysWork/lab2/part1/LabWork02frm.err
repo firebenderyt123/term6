@@ -1,0 +1,33 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:52:04
+
+ *** ERROR ***                           CP =       1.763   TIME= 22:52:31
+ This function requires defined lines.                                   
+  No lines are currently defined.                                        
+
+ *** ERROR ***                           CP =       3.526   TIME= 23:00:19
+ Cannot find line that would intersect line 9 at 100 degrees.            
+
+ *** ERROR ***                           CP =       3.557   TIME= 23:00:21
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       3.619   TIME= 23:00:48
+ Cannot find line that would intersect line 7 at 80 degrees.             
+
+ *** ERROR ***                           CP =       3.619   TIME= 23:00:49
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       4.820   TIME= 23:03:33
+ Fillet is not possible.                                                 
+
+ *** ERROR ***                           CP =       4.914   TIME= 23:03:42
+ Fillet is not possible.                                                 
+
+ *** ERROR ***                           CP =       4.992   TIME= 23:03:47
+ Fillet is not possible.                                                 
+
+ *** ERROR ***                           CP =       5.070   TIME= 23:03:53
+ Fillet is not possible.                                                 
+
+ *** ERROR ***                           CP =       5.351   TIME= 23:04:14
+ This function requires selected areas.                                  
+  No areas are currently selected.                                       
