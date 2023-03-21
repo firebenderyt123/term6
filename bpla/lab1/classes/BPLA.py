@@ -1,5 +1,5 @@
 import numpy as np
-from math import sqrt
+from scipy.integrate import quad
 
 
 class BPLA:
@@ -11,7 +11,8 @@ class BPLA:
     def __init__(
             self,
             I, m, dt, J, J0, Kf, Kf0,  # noqa
-            Km, Km0, p, G, Ks,
+            Km, Km0, p, G, Ks, H_, pos,
+            Vx_, Vymax, Vz_, c,
             state
             ):
         self.t = 0.0
@@ -27,6 +28,12 @@ class BPLA:
         self.p = p
         self.G = G
         self.Ks = Ks
+        self.H_ = H_
+        self.pos = pos
+        self.Vx_ = Vx_
+        self.Vymax = Vymax
+        self.Vz_ = Vz_
+        self.c = c
         self.state = state  # стан беспілотника
 
         # Вектор локальної похідної кінетичного моменту двигунів
@@ -49,13 +56,28 @@ class BPLA:
 
     def launch(self):
         np.seterr(all='raise')
-        for i in range(int(50 / self.dt)):  # 50 cек
-            self.next_step()
-            self.calc_new_state()
-            print(self.t)
+
+        ts = 50 - 0
+        num_steps = int(ts / self.dt)
+        states = [self.state]
+        state = self.state
+        for i in range(num_steps):
+            # вивід поточного стану кожну секунду
+            if (i % (num_steps / ts) == 0):
+                self.t = i / (num_steps / ts)
+                states.append(state)
+                print(f'{self.t}/{ts}', state)
+
+            self.vertical_controller()
+            self.calc_forces()
+
+            state_derivative = self.derivative(state)
+            state = state + state_derivative * self.dt
+
+        self.states = states
 
     # Функція, що повертає похідні від вектора стану
-    def state_dot(self, state):
+    def derivative(self, state):
         x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = state  # noqa
 
         # розрахунок похідних
@@ -77,7 +99,7 @@ class BPLA:
         omega4_dot = eps4
         omega5_dot = eps5
 
-        print(Om_dot, self.Mg, self.dH, self.MFe, self.MAe, self.I)
+        # print(Om_dot, self.Mg, self.dH, self.MFe, self.MAe, self.I)
 
         return np.array([
             x_dot,
@@ -106,16 +128,76 @@ class BPLA:
             eps5
         ], dtype=np.float64)
 
-    def next_step(self):
-        self.t += self.dt
+    # Управління  МК
+    def main_controller(self):
+        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = self.state # noqa
 
-        # чисельне інтегрування
-        new_state_dot = BPLA.euler_integration(self.state_dot, self.state, [self.t, self.t + self.dt], self.dt)  # noqa
+        ay_ = self.vertical_controller()
 
-        self.prev_state = self.state
-        self.state = new_state_dot
+        eps0 = ay_ * self.m / (2 * self.c[0] * omega0)
 
-    def calc_new_state(self):
+    # Регулятор  вертикального  каналу  системи управління
+    def vertical_controller(self):
+        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = self.state # noqa
+
+        vy_dot = self.Fe[1] / self.m + self.G[1] + self.Fs[1] / self.m
+
+        if abs(self.H_ - y) > 20:
+            b = 1
+            k = np.array([
+                -b ** 2,
+                -2 * b
+            ])
+            ay_ = k[1] * vy + k[0] * (vy_dot - self.Vymax*np.sign(self.H_ - y))
+        else:
+            b = 0.5
+            k = np.array([
+                -b ** 3,
+                -3 * b ** 2,
+                -3 * b
+            ])
+            ay_ = k[2] * vy_dot + k[1] * vy + k[0] * (y - self.H_)
+
+        return ay_
+
+    # Формування  заданих  значень керованих  змінних,  виходячи  з  запланованих режимів  # noqa
+    def values_formation(self):
+        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = self.state # noqa
+
+        '''
+        Формування  заданого  значення  кута  курсу
+        для націлювання МК на задану точку призначення
+        здійснюється за формулою
+        '''
+        dx, _, dz = self.pos - np.array([x, y, z])
+        dx_plus_dz = (dx ** 2 + dz ** 2) ** 0.5
+
+        if dx_plus_dz < 10:
+            psi_ = psi
+        else:
+            psi_ = np.arccos(dx / dx_plus_dz) * np.sign(dz)
+
+        '''
+        Формування потрібного  значення  кута крену
+        для  реалізації  заданої  поперечної  швидкості  МК
+        здійснюється за формулою
+        '''
+        b = 0.5
+        k = np.array([
+            -b ** 2,
+            -2 * b
+        ])
+        int_a = self.t  # ???
+        int_b = self.t + self.dt  # ???
+        gamma_ = 1 / (self.G[1] * self.m) * (
+            self.m * (
+                k[1] * (self.v_zsk - self.Vz_) + k[0] * quad(
+                    self.v_zsk - self.Vz_, int_a, int_b  # ???
+                )
+            ) - self.Fs_zsk[2] + abs(self.c[5]) * omega5 ** 2
+        )
+
+    def calc_forces(self):
         x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = self.state # noqa
 
         # 1
@@ -169,7 +251,7 @@ class BPLA:
         )
 
         # 5
-        v_zsk = BPLA.quat_mult(
+        self.v_zsk = BPLA.quat_mult(
             BPLA.quat_mult(
                 Lam_inv,
                 np.array([0, vx, vy, vz])
@@ -177,15 +259,15 @@ class BPLA:
             Lam
          )
 
-        Fs_zsk = np.array([
+        self.Fs_zsk = np.array([
             0,  # ???
-            -self.Ks[0] * v_zsk[0] ** 2 * np.sign(v_zsk[0]),
-            -self.Ks[1] * v_zsk[1] ** 2 * np.sign(v_zsk[1]),
-            -self.Ks[2] * v_zsk[2] ** 2 * np.sign(v_zsk[2])
+            -self.Ks[0] * self.v_zsk[0] ** 2 * np.sign(self.v_zsk[0]),
+            -self.Ks[1] * self.v_zsk[1] ** 2 * np.sign(self.v_zsk[1]),
+            -self.Ks[2] * self.v_zsk[2] ** 2 * np.sign(self.v_zsk[2])
         ])
         self.Fs = BPLA.vect(  # ???
             BPLA.quat_mult(
-                BPLA.quat_mult(Lam, Fs_zsk),
+                BPLA.quat_mult(Lam, self.Fs_zsk),
                 Lam_inv
             )
         )
@@ -203,7 +285,7 @@ class BPLA:
 
         self.Mg = np.cross(Om, H)  # векторний доб
 
-        print(Om, H)
+        # print(Om, H)
 
         # 7
         self.dH = np.array([
@@ -212,7 +294,7 @@ class BPLA:
             self.J * eps5
         ])
 
-        # 8 ??? двигунів 5, а сил 6
+        # 8 ???
         self.MFe = np.sum(np.cross(self.p, F), axis=0)
 
         # 9
@@ -262,18 +344,25 @@ class BPLA:
         """
         return np.array([q[0], -q[1], -q[2], -q[3]])
 
-    @staticmethod
-    def euler_integration(f, state, time_span, time_step):
-        """
-        f: функція правої частини диференціального рівняння
-        state: початкове значення стану
-        time_span: проміжок часу
-        time_step: крок інтегрування
-        return: масив значень y на кожному кроці інтегрування
-        """
-        num_steps = int((time_span[1] - time_span[0]) / time_step) + 1
-        for i in range(num_steps - 1):
-            state_derivative = f(state)
-            state += state_derivative * time_step
+    # def euler_integration(self, f, state, time_span, dt):
+    #     """
+    #     f: функція правої частини диференціального рівняння
+    #     state: початкове значення стану
+    #     time_span: проміжок часу
+    #     dt: крок інтегрування
+    #     return: масив значень y на кожному кроці інтегрування
+    #     """
+    #     ts = time_span[1] - time_span[0]
+    #     num_steps = int(ts / dt)
+    #     states = [state]
+    #     prev_state = state
+    #     for i in range(num_steps):
+    #         self.calc_forces()
+    #         state_derivative = f(prev_state)
+    #         state = prev_state + state_derivative * dt
+    #         prev_state = state
+    #         if (i % ts == 0):
+    #             states.append(state)
+    #             print(f'{i / ts}/{ts}', state)
 
-        return state
+    #     return states

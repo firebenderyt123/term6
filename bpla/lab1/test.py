@@ -1,4 +1,3 @@
-from classes.BPLA import BPLA
 import matplotlib.pyplot as plt
 from math import pi
 import numpy as np
@@ -39,21 +38,6 @@ Ks = np.array([
     0.1,
     0.1
 ])
-
-# Потрібна висота та  потрібні  координати
-H_ = 170
-pos = np.array([
-    1500,
-    0,
-    800
-])
-
-Vx_ = 10  # м/с значення  поперечної  швидкості
-Vymax = 2  # м/с Максимально допустима  швидкість  вертикального  руху
-Vz_ = 10  # м/с значення  поперечної  швидкості
-
-# Жорсткість пружини ????
-c = np.array([1, 1, 1, 1, 1, 1])
 
 # Початкові умови
 
@@ -105,31 +89,18 @@ def start_bpla():
     ])
 
     bpla = BPLA(
-        I, m, dt, J, J0, Kf, Kf0,
-        Km, Km0, p, G, Ks, H_, pos,
-        Vx_, Vymax, Vz_, c,
+        I, m, dt, J, J0, Kf, Kf0, Km, Km0, p, G, Ks,
         state
     )
     bpla.launch()
 
     states = bpla.states
 
-    position = [state[0:3] for state in states]
-    pos_labels = ['x', 'y', 'z']
+    v = [state[3:6] for state in states]
+    print(v, len(v))
 
-    plt.plot(position, label=pos_labels)
-    plt.title('Поведінка координат відносно ІСК під час польоту')
+    plt.plot(v)
+    plt.title('Найкраще значення функції на кожній ітерації')
     plt.xlabel('Час, с')
-    plt.ylabel('Координата, м')
-
-    plt.legend()
+    plt.ylabel('Проекції вектору швидкості, м/с')
     plt.show()
-
-    # v = [state[3:6] for state in states]
-    # print(position)
-
-    # plt.plot(v)
-    # plt.title('Поведінка проекцій V1, V2,V3 швидкості відповідно на осі X, Y, Z ІСК під час польоту')  # noqa
-    # plt.xlabel('Час, с')
-    # plt.ylabel('Проекції вектору швидкості, м/с')
-    # plt.show()
