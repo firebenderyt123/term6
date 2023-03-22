@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.integrate import quad
+import sympy
 
 
 class BPLA:
@@ -34,7 +35,34 @@ class BPLA:
         self.Vymax = Vymax
         self.Vz_ = Vz_
         self.c = c
-        self.state = state  # стан беспілотника
+
+        [
+            self.x,
+            self.y,
+            self.z,
+            self.vx,
+            self.vy,
+            self.vz,
+            self.psi,
+            self.teta,
+            self.gamma,
+            self.Om1,
+            self.Om2,
+            self.Om3,
+            self.omega0,
+            self.omega1,
+            self.omega2,
+            self.omega3,
+            self.omega4,
+            self.omega5,
+            self.eps0,
+            self.eps1,
+            self.eps2,
+            self.eps3,
+            self.eps4,
+            self.eps5
+        ] = state
+        self.state = state
 
         # Вектор локальної похідної кінетичного моменту двигунів
         self.dH = np.array([0.0, 0.0, 0.0])
@@ -59,8 +87,8 @@ class BPLA:
 
         ts = 50 - 0
         num_steps = int(ts / self.dt)
-        states = [self.state]
         state = self.state
+        states = [state]
         for i in range(num_steps):
             # вивід поточного стану кожну секунду
             if (i % (num_steps / ts) == 0):
@@ -68,11 +96,38 @@ class BPLA:
                 states.append(state)
                 print(f'{self.t}/{ts}', state)
 
-            self.vertical_controller()
-            self.calc_forces()
+                # self.main_controller()
+                self.calc_forces()
 
-            state_derivative = self.derivative(state)
-            state = state + state_derivative * self.dt
+            prev_state = state
+            state = self.derivative(state)
+            state = prev_state + state * self.dt
+            # [
+            #     self.x,
+            #     self.y,
+            #     self.z,
+            #     self.vx,
+            #     self.vy,
+            #     self.vz,
+            #     self.psi,
+            #     self.teta,
+            #     self.gamma,
+            #     self.Om1,
+            #     self.Om2,
+            #     self.Om3,
+            #     self.omega0,
+            #     self.omega1,
+            #     self.omega2,
+            #     self.omega3,
+            #     self.omega4,
+            #     self.omega5,
+            #     self.eps0,
+            #     self.eps1,
+            #     self.eps2,
+            #     self.eps3,
+            #     self.eps4,
+            #     self.eps5
+            # ] = state
 
         self.states = states
 
@@ -86,9 +141,17 @@ class BPLA:
         z_dot = vz
         v_dot = self.Fe / self.m + self.G + self.Fs / self.m
 
-        psi_dot = (Om3 * np.sin(gamma) - Om2 * np.cos(gamma)) / np.cos(teta) # noqa
-        teta_dot = Om2 * np.sin(gamma) + Om3 * np.cos(gamma)
-        gamma_dot = Om1 + np.tan(teta) * (Om3 * np.sin(gamma) - Om2 * np.cos(gamma)) # noqa
+        psi_dot = (
+            Om3 * np.sin(gamma) - Om2 * np.cos(gamma)
+        ) / np.cos(teta)
+
+        teta_dot = Om2 * np.sin(
+            gamma
+        ) + Om3*np.cos(gamma)
+
+        gamma_dot = Om1 + np.tan(teta) * (
+            Om3 * np.sin(gamma) - Om2 * np.cos(gamma)
+        )
 
         Om_dot = (-self.Mg - self.dH + self.MFe + self.MAe) / self.I
 
@@ -98,8 +161,6 @@ class BPLA:
         omega3_dot = eps3
         omega4_dot = eps4
         omega5_dot = eps5
-
-        # print(Om_dot, self.Mg, self.dH, self.MFe, self.MAe, self.I)
 
         return np.array([
             x_dot,
@@ -126,29 +187,30 @@ class BPLA:
             eps3,
             eps4,
             eps5
-        ], dtype=np.float64)
+        ])
 
     # Управління  МК
     def main_controller(self):
-        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = self.state # noqa
-
         ay_ = self.vertical_controller()
+        # self.values_formation()
+        # self.angle_controller()
 
-        eps0 = ay_ * self.m / (2 * self.c[0] * omega0)
+        self.eps0 = ay_ * self.m / (2 * self.c[0] * self.omega0)
+        # self.eps5 =
 
     # Регулятор  вертикального  каналу  системи управління
     def vertical_controller(self):
-        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = self.state # noqa
-
         vy_dot = self.Fe[1] / self.m + self.G[1] + self.Fs[1] / self.m
 
-        if abs(self.H_ - y) > 20:
+        if abs(self.H_ - self.y) > 20:
             b = 1
             k = np.array([
                 -b ** 2,
                 -2 * b
             ])
-            ay_ = k[1] * vy + k[0] * (vy_dot - self.Vymax*np.sign(self.H_ - y))
+            ay_ = k[1] * self.vy + k[0] * (
+                vy_dot - self.Vymax*np.sign(self.H_ - self.y)
+            )
         else:
             b = 0.5
             k = np.array([
@@ -156,26 +218,42 @@ class BPLA:
                 -3 * b ** 2,
                 -3 * b
             ])
-            ay_ = k[2] * vy_dot + k[1] * vy + k[0] * (y - self.H_)
+            ay_ = k[2] * vy_dot + k[1] * self.vy + k[0] * (self.y - self.H_)
 
         return ay_
 
+    # Регулятор  каналу  курса  системи управління
+    def angle_controller(self):
+        b = 5
+        k = np.array([
+            -b ** 3,
+            -3 * b ** 2,
+            -3 * b
+        ])
+
+        f = (
+            self.Om3 * np.sin(self.gamma) - self.Om2 * np.cos(self.gamma)
+        ) / np.cos(self.teta)
+        df = sympy.diff(f, x)
+
+        # psi__  # ??????
+
+        # self.sigma_y_ = k[2] * psi__
+
     # Формування  заданих  значень керованих  змінних,  виходячи  з  запланованих режимів  # noqa
     def values_formation(self):
-        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = self.state # noqa
-
         '''
         Формування  заданого  значення  кута  курсу
         для націлювання МК на задану точку призначення
         здійснюється за формулою
         '''
-        dx, _, dz = self.pos - np.array([x, y, z])
+        dx, _, dz = self.pos - np.array([self.x, self.y, self.z])
         dx_plus_dz = (dx ** 2 + dz ** 2) ** 0.5
 
         if dx_plus_dz < 10:
-            psi_ = psi
+            self.psi_ = self.psi
         else:
-            psi_ = np.arccos(dx / dx_plus_dz) * np.sign(dz)
+            self.psi_ = np.arccos(dx / dx_plus_dz) * np.sign(dz)
 
         '''
         Формування потрібного  значення  кута крену
@@ -189,74 +267,114 @@ class BPLA:
         ])
         int_a = self.t  # ???
         int_b = self.t + self.dt  # ???
-        gamma_ = 1 / (self.G[1] * self.m) * (
+        self.gamma_ = 1 / (self.G[1] * self.m) * (
             self.m * (
                 k[1] * (self.v_zsk - self.Vz_) + k[0] * quad(
                     self.v_zsk - self.Vz_, int_a, int_b  # ???
                 )
-            ) - self.Fs_zsk[2] + abs(self.c[5]) * omega5 ** 2
+            ) - self.Fs_zsk[2] + abs(self.c[5]) * self.omega5 ** 2
         )
 
+        '''
+        Формування  потрібного  значення  кута  тангажу
+        для  реалізації  заданої  поздовжньої  швидкості
+        МК здійснюється за формулою
+        '''
+        k1 = -0.1
+        self.teta_ = -(
+            self.m * k1 * (self.vx - self.Vx_) - self.Fs[0]
+        ) / (self.G[1] * self.m)
+
+        '''
+         Формування змінних значень кутів  крену та
+        тангажу для стабілізації МК у заданій точці
+        здійснюється за формулами
+        '''
+        b = 0.1
+        k = np.array([
+            -b ** 2,
+            -2 * b
+        ])
+
+        d_R = np.array([0, self.x - self.x_, 0, self.z - self.z_])  # ???
+        d_R_zsk = BPLA.quat_mult(
+            BPLA.quat_mult(self.Lam_inv, d_R),
+            self.Lam
+        )
+
+        d_vx, _, d_vz = d_R_zsk
+
+        self.gamma_ = (
+            self.m * (
+                self.k[1] * self.vz + k[0] * d_vz
+            ) - self.Fs[2] + abs(self.c[5]) * self.omega5 ** 2
+        ) / (self.G[1] * self.m)
+
+        self.teta_ = -(
+            self.m * (
+                self.k[1] * self.vx + self.k[0] * d_vx
+            ) - self.Fs[0]
+        ) / (self.G[1] * self.m)
+
     def calc_forces(self):
-        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = self.state # noqa
 
         # 1
         # Вектори сили тяги двигунів
-        F = np.array([
-            self.Kf0 * omega0 ** 2 * self.e2,
-            self.Kf * omega1 ** 2 * self.e2,
-            self.Kf * omega2 ** 2 * self.e2,
-            self.Kf * omega3 ** 2 * self.e2,
-            self.Kf * omega4 ** 2 * self.e2,
-            self.Kf * omega5 ** 2 * self.e3
+        self.F = np.array([
+            self.Kf0 * self.omega0 ** 2 * self.e2,
+            self.Kf * self.omega1 ** 2 * self.e2,
+            self.Kf * self.omega2 ** 2 * self.e2,
+            self.Kf * self.omega3 ** 2 * self.e2,
+            self.Kf * self.omega4 ** 2 * self.e2,
+            self.Kf * self.omega5 ** 2 * self.e3
         ])
 
-        Fe_zsk = np.sum(F, axis=0)  # Сумарний вектор
+        self.Fe_zsk = np.sum(self.F, axis=0)  # Сумарний вектор
 
         # кватерніон орієнтації ЗСК відносно ІСК
-        Lam_psi = np.array([
-            np.cos(psi/2),
+        self.Lam_psi = np.array([
+            np.cos(self.psi/2),
             0,
-            -np.sin(psi/2),
+            -np.sin(self.psi/2),
             0
         ])
-        Lam_teta = np.array([
-            np.cos(teta/2),
+        self.Lam_teta = np.array([
+            np.cos(self.teta/2),
             0,
             0,
-            np.sin(teta/2)
+            np.sin(self.teta/2)
         ])
-        Lam_gamma = np.array([
-            np.cos(gamma/2),
-            np.sin(gamma/2),
+        self.Lam_gamma = np.array([
+            np.cos(self.gamma/2),
+            np.sin(self.gamma/2),
             0,
             0
         ])
 
         # Lam1 = np.multiply(Lam_psi, Lam_teta, Lam_gamma)
 
-        Lam = BPLA.quat_mult(
-            BPLA.quat_mult(Lam_psi, Lam_teta),
-            Lam_gamma
+        self.Lam = BPLA.quat_mult(
+            BPLA.quat_mult(self.Lam_psi, self.Lam_teta),
+            self.Lam_gamma
         )
 
         # 4
-        Phiez = np.hstack([0, Fe_zsk])
-        Lam_inv = BPLA.quat_inverse(Lam)
+        self.Phiez = np.hstack([0, self.Fe_zsk])
+        self.Lam_inv = BPLA.quat_inverse(self.Lam)
         self.Fe = BPLA.vect(  # ???
             BPLA.quat_mult(
-                BPLA.quat_mult(Lam, Phiez),
-                Lam_inv
+                BPLA.quat_mult(self.Lam, self.Phiez),
+                self.Lam_inv
              )
         )
 
         # 5
         self.v_zsk = BPLA.quat_mult(
             BPLA.quat_mult(
-                Lam_inv,
-                np.array([0, vx, vy, vz])
+                self.Lam_inv,
+                np.array([0, self.vx, self.vy, self.vz])
             ),
-            Lam
+            self.Lam
          )
 
         self.Fs_zsk = np.array([
@@ -267,53 +385,57 @@ class BPLA:
         ])
         self.Fs = BPLA.vect(  # ???
             BPLA.quat_mult(
-                BPLA.quat_mult(Lam, self.Fs_zsk),
-                Lam_inv
+                BPLA.quat_mult(self.Lam, self.Fs_zsk),
+                self.Lam_inv
             )
         )
 
         # 6
 
         # Вектор сумарного кінетичного моменту «МК + ротори з гвинтами»
-        H = np.array([
-            self.I[0] * Om1,
-            self.I[1] * Om2 + self.J * (omega1 - omega2 + omega3 - omega4) + self.J0 * omega0,  # noqa
-            self.I[2] * Om3 + self.J * omega5
+        self.H = np.array([
+            self.I[0] * self.Om1,
+            self.I[1] * self.Om2 + self.J * (
+                self.omega1 - self.omega2 + self.omega3 - self.omega4
+            ) + self.J0 * self.omega0,
+            self.I[2] * self.Om3 + self.J * self.omega5
         ])
 
-        Om = np.array([Om1, Om2, Om3])
+        self.Om = np.array([self.Om1, self.Om2, self.Om3])
 
-        self.Mg = np.cross(Om, H)  # векторний доб
+        self.Mg = np.cross(self.Om, self.H)  # векторний доб
 
         # print(Om, H)
 
         # 7
         self.dH = np.array([
             0,
-            self.J * (eps1 - eps2 + eps3 - eps4) + self.J0 * eps0,  # noqa
-            self.J * eps5
+            self.J * (
+                self.eps1 - self.eps2 + self.eps3 - self.eps4
+            ) + self.J0 * self.eps0,
+            self.J * self.eps5
         ])
 
         # 8 ???
-        self.MFe = np.sum(np.cross(self.p, F), axis=0)
+        self.MFe = np.sum(np.cross(self.p, self.F), axis=0)
 
         # 9
 
         # Аеродинамічні моменти від кожного гвинта
-        Ma = np.array([
-            self.Km0 * omega0 ** 2 * self.e2,
-            self.Km * omega1 ** 2 * self.e2,
-            -self.Km * omega2 ** 2 * self.e2,
-            self.Km * omega3 ** 2 * self.e2,
-            -self.Km * omega4 ** 2 * self.e2,
-            self.Km * omega5 ** 2 * self.e3
+        self.Ma = np.array([
+            self.Km0 * self.omega0 ** 2 * self.e2,
+            self.Km * self.omega1 ** 2 * self.e2,
+            -self.Km * self.omega2 ** 2 * self.e2,
+            self.Km * self.omega3 ** 2 * self.e2,
+            -self.Km * self.omega4 ** 2 * self.e2,
+            self.Km * self.omega5 ** 2 * self.e3
         ])
 
         # 10
-        self.MAe = np.sum(Ma, axis=0)
+        self.MAe = np.sum(self.Ma, axis=0)
 
     @staticmethod
-    def vect(q):  # ???
+    def vect(q):
         """
         q: кватерніон
         return: 3-х мірний вектор
@@ -343,26 +465,3 @@ class BPLA:
         return: кватерніон
         """
         return np.array([q[0], -q[1], -q[2], -q[3]])
-
-    # def euler_integration(self, f, state, time_span, dt):
-    #     """
-    #     f: функція правої частини диференціального рівняння
-    #     state: початкове значення стану
-    #     time_span: проміжок часу
-    #     dt: крок інтегрування
-    #     return: масив значень y на кожному кроці інтегрування
-    #     """
-    #     ts = time_span[1] - time_span[0]
-    #     num_steps = int(ts / dt)
-    #     states = [state]
-    #     prev_state = state
-    #     for i in range(num_steps):
-    #         self.calc_forces()
-    #         state_derivative = f(prev_state)
-    #         state = prev_state + state_derivative * dt
-    #         prev_state = state
-    #         if (i % ts == 0):
-    #             states.append(state)
-    #             print(f'{i / ts}/{ts}', state)
-
-    #     return states

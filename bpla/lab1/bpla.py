@@ -70,18 +70,18 @@ gamma0 = 0.0
 Om1 = 0.0  # вектор кутової швидкості МК
 Om2 = 0.0  # вектор кутової швидкості МК
 Om3 = 0.0  # вектор кутової швидкості МК
-omega0 = 0.0
-omega1 = 0.0
-omega2 = 0.0
-omega3 = 0.0
-omega4 = 0.0
-omega5 = 0.0
 eps0 = 21.0 * 2 * pi
 eps1 = 10.0 * 2 * pi
 eps2 = 10.0 * 2 * pi
 eps3 = 10.0 * 2 * pi
 eps4 = 10.0 * 2 * pi
 eps5 = 17.0 * 2 * pi
+omega0 = eps0
+omega1 = eps1
+omega2 = eps2
+omega3 = eps3
+omega4 = eps4
+omega5 = eps5
 
 
 def start_bpla():
