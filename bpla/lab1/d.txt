@@ -1,0 +1,217 @@
+import numpy as np
+import quaternion  # noqa
+from scipy.integrate import quad
+import sympy
+class BPLA:
+    e1 = np.array([1, 0, 0])
+    e2 = np.array([0, 1, 0])
+    e3 = np.array([0, 0, 1])
+    def __init__(
+        self,
+        I, m, dt, J, J0, Kf, Kf0,  # noqa
+        Km, Km0, p, G, Ks, H_, pos,
+        Vx_, Vymax, Vz_, c,
+        state
+    ):
+        self.t = 0.0
+        self.I = I  # noqa
+        self.m = m
+        self.dt = dt
+        self.J = J
+        self.J0 = J0
+        self.Kf = Kf
+        self.Kf0 = Kf0
+        self.Km = Km
+        self.Km0 = Km0
+        self.p = p
+        self.G = G
+        self.Ks = Ks
+        self.H_ = H_
+        self.pos = pos
+        self.Vx_ = Vx_
+        self.Vymax = Vymax
+        self.Vz_ = Vz_
+        self.c = c
+        self.state = state
+        # Вектор локальної похідної кінетичного моменту двигунів
+        self.dH = np.array([0.0, 0.0, 0.0])
+        # Рівнодіючs силb тяги двигунів у проекціях на осі ІСК
+        self.Fe = np.array([0.0, 0.0, 0.0])
+        # Проекції сили опору повітря
+        self.Fs = np.array([0.0, 0.0, 0.0])
+        # Вектор гіроскопічного моменту в проекціях на осі ЗСК
+        self.Mg_zsk = np.array([0.0, 0.0, 0.0])
+        # Cумарний момент сил тяги двигунів
+        self.MFe = np.array([0.0, 0.0, 0.0])
+        # Cумарний аеродинамічний момент від шести двигунів
+        self.MAe = np.array([0.0, 0.0, 0.0])
+    def launch(self):
+        np.seterr(all='raise')
+        ts = 13 - 0
+        num_steps = int(ts / self.dt)
+        state = self.state
+        states = []
+        for i in range(num_steps):
+            [
+                self.x,
+                self.y,
+                self.z,
+                self.vx,
+                self.vy,
+                self.vz,
+                self.psi,
+                self.teta,
+                self.gamma,
+                self.Om1,
+                self.Om2,
+                self.Om3,
+                self.omega0,
+                self.omega1,
+                self.omega2,
+                self.omega3,
+                self.omega4,
+                self.omega5,
+                self.eps0,
+                self.eps1,
+                self.eps2,
+                self.eps3,
+                self.eps4,
+                self.eps5
+            ] = state
+            # вивід поточного стану кожну секунду
+            if (i % (num_steps / ts) == 0):
+                self.t = i / (num_steps / ts)
+                print(f'{self.t}/{ts}', state)
+            states.append(state)
+            # self.main_controller()
+            self.calc_forces()
+            prev_state = state
+            state = self.derivative(state)
+            state = prev_state + state * self.dt
+        self.states = states
+    # Функція, що повертає похідні від вектора стану
+    def derivative(self, state):
+        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = state  # noqa
+        # розрахунок похідних
+        x_dot_ = vx
+        y_dot_ = vy
+        z_dot_ = vz
+        v_dot = self.Fe / self.m + self.G + self.Fs / self.m
+        psi_dot = (
+            Om3 * np.sin(gamma) - Om2 * np.cos(gamma)
+        ) / np.cos(teta)
+        teta_dot = Om2 * np.sin(
+            gamma
+        ) + Om3*np.cos(gamma)
+        gamma_dot = Om1 + np.tan(teta) * (
+            Om3 * np.sin(gamma) - Om2 * np.cos(gamma)
+        )
+        Om_dot = (-self.Mg_zsk - self.dH + self.MFe + self.MAe) / self.I
+        omega0_dot = eps0
+        omega1_dot = eps1
+        omega2_dot = eps2
+        omega3_dot = eps3
+        omega4_dot = eps4
+        omega5_dot = eps5
+        return np.array([
+            x_dot_,
+            y_dot_,
+            z_dot_,
+            v_dot[0],
+            v_dot[1],
+            v_dot[2],
+            psi_dot,
+            teta_dot,
+            gamma_dot,
+            Om_dot[0],
+            Om_dot[1],
+            Om_dot[2],
+            omega0_dot,
+            omega1_dot,
+            omega2_dot,
+            omega3_dot,
+            omega4_dot,
+            omega5_dot,
+            eps0,
+            eps1,
+            eps2,
+            eps3,
+            eps4,
+            eps5
+        ])
+    def calc_forces(self):
+        # Вектори сили тяги двигунів
+        self.F = np.array([
+            self.Kf0 * self.omega0 ** 2 * self.e2,
+            self.Kf * self.omega1 ** 2 * self.e2,
+            self.Kf * self.omega2 ** 2 * self.e2,
+            self.Kf * self.omega3 ** 2 * self.e2,
+            self.Kf * self.omega4 ** 2 * self.e2,
+            self.Kf * self.omega5 ** 2 * self.e3
+        ])
+        Fe_zsk = np.sum(self.F, axis=0)  # Сумарний вектор
+        # кватерніон орієнтації ЗСК відносно ІСК
+        Lam_psi = np.quaternion(
+            np.cos(self.psi/2),
+            0,
+            -np.sin(self.psi/2),
+            0
+        )
+        Lam_teta = np.quaternion(
+            np.cos(self.teta/2),
+            0,
+            0,
+            np.sin(self.teta/2)
+        )
+        Lam_gamma = np.quaternion(
+            np.cos(self.gamma/2),
+            np.sin(self.gamma/2),
+            0,
+            0
+        )
+        Lam = Lam_psi * Lam_teta * Lam_gamma
+        Phiez = np.quaternion(
+            0,
+            Fe_zsk[0],
+            Fe_zsk[1],
+            Fe_zsk[2]
+        )
+        self.Fe = (Lam * Phiez * Lam.inverse()).vec
+        v = np.quaternion(0, self.vx, self.vy, self.vz)
+        v_zsk = (Lam.inverse() * v * Lam).vec
+        Fs_zsk = np.quaternion(
+            0,
+            -self.Ks[0] * v_zsk[0] ** 2 * np.sign(v_zsk[0]),
+            -self.Ks[1] * v_zsk[1] ** 2 * np.sign(v_zsk[1]),
+            -self.Ks[2] * v_zsk[2] ** 2 * np.sign(v_zsk[2])
+        )
+        self.Fs = (Lam * Fs_zsk * Lam.inverse()).vec
+        # Вектор сумарного кінетичного моменту «МК + ротори з гвинтами»
+        Om = np.array([self.Om1, self.Om2, self.Om3])
+        H = np.array([
+            self.I[0] * Om[0],
+            self.I[1] * Om[1] + self.J * (
+                self.omega1 - self.omega2 + self.omega3 - self.omega4
+            ) + self.J0 * self.omega0,
+            self.I[2] * Om[2] + self.J * self.omega5
+        ])
+
+        self.Mg_zsk = np.cross(Om, H)  # векторний доб
+        self.dH = np.array([
+            0,
+            self.J * (
+                self.eps1 - self.eps2 + self.eps3 - self.eps4
+            ) + self.J0 * self.eps0,
+            self.J * self.eps5
+        ])
+        self.MFe = np.sum(np.cross(self.p, self.F), axis=0)
+        # Аеродинамічні моменти від кожного гвинта
+        Ma = np.array([
+            self.Km0 * self.omega0 ** 2 * self.e2,
+            self.Km * self.omega1 ** 2 * self.e2,
+            -self.Km * self.omega2 ** 2 * self.e2,
+            self.Km * self.omega3 ** 2 * self.e2,
+            -self.Km * self.omega4 ** 2 * self.e2,
+            self.Km * self.omega5 ** 2 * self.e3
+        ])
+        self.MAe = np.sum(Ma, axis=0)
