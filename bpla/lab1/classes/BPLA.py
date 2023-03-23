@@ -11,12 +11,13 @@ class BPLA:
     e3 = np.array([0, 0, 1])
 
     def __init__(
-        self,
+        self, time,
         I, m, dt, J, J0, Kf, Kf0,  # noqa
         Km, Km0, p, G, Ks, H_, pos,
         Vx_, Vymax, Vz_, c,
         state
     ):
+        self.time = time
         self.t = 0.0
         self.I = I  # noqa
         self.m = m
@@ -37,7 +38,32 @@ class BPLA:
         self.Vz_ = Vz_
         self.c = c
 
-        self.state = state
+        [
+            self.x,
+            self.y,
+            self.z,
+            self.vx,
+            self.vy,
+            self.vz,
+            self.psi,
+            self.teta,
+            self.gamma,
+            self.Om1,
+            self.Om2,
+            self.Om3,
+            self.omega0,
+            self.omega1,
+            self.omega2,
+            self.omega3,
+            self.omega4,
+            self.omega5,
+            self.eps0,
+            self.eps1,
+            self.eps2,
+            self.eps3,
+            self.eps4,
+            self.eps5
+        ] = state
 
         # Вектор локальної похідної кінетичного моменту двигунів
         self.dH = np.array([0.0, 0.0, 0.0])
@@ -60,12 +86,12 @@ class BPLA:
     def launch(self):
         np.seterr(all='raise')
 
-        ts = 13 - 0
+        ts = self.time
         num_steps = int(ts / self.dt)
-        state = self.state
         states = []
         for i in range(num_steps):
-            [
+
+            state = [
                 self.x,
                 self.y,
                 self.z,
@@ -90,98 +116,94 @@ class BPLA:
                 self.eps3,
                 self.eps4,
                 self.eps5
-            ] = state
+            ]
 
             # вивід поточного стану кожну секунду
             if (i % (num_steps / ts) == 0):
                 self.t = i / (num_steps / ts)
-                # print(f'{self.t}/{ts}', state)
+                print(f'{self.t}/{ts}', state)
 
             states.append(state)
 
-            # self.main_controller()
             self.calc_forces()
+            # self.main_controller()
 
-            prev_state = state
-            state = self.derivative(state)
-            state = prev_state + state * self.dt
+            self.derivative()
 
             # print(state[6:9])
 
         self.states = states
 
     # Функція, що повертає похідні від вектора стану
-    def derivative(self, state):
-        x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5 = state  # noqa
-
+    def derivative(self):
         # розрахунок похідних
-        x_dot_ = vx
-        y_dot_ = vy
-        z_dot_ = vz
-        v_dot = self.Fe / self.m + self.G + self.Fs / self.m
+        self.x = self.x + self.vx * self.dt
+        self.y = self.y + self.vy * self.dt
+        self.z = self.z + self.vz * self.dt
 
-        psi_dot = (
-            Om3 * np.sin(gamma) - Om2 * np.cos(gamma)
-        ) / np.cos(teta)
+        self.vx = self.vx + (
+            self.Fe[0] / self.m + self.G[0] + self.Fs[0] / self.m
+        ) * self.dt
+        self.vy = self.vy + (
+            self.Fe[1] / self.m + self.G[1] + self.Fs[1] / self.m
+        ) * self.dt
+        self.vz = self.vz + (
+            self.Fe[2] / self.m + self.G[2] + self.Fs[2] / self.m
+        ) * self.dt
 
-        teta_dot = Om2 * np.sin(
-            gamma
-        ) + Om3*np.cos(gamma)
+        psi = (
+            self.Om3 * np.sin(self.gamma) - self.Om2 * np.cos(self.gamma)
+        ) / np.cos(self.teta)
 
-        gamma_dot = Om1 + np.tan(teta) * (
-            Om3 * np.sin(gamma) - Om2 * np.cos(gamma)
+        teta = self.Om2 * np.sin(
+            self.gamma
+        ) + self.Om3*np.cos(self.gamma)
+
+        gamma = self.Om1 + np.tan(self.teta) * (
+            self.Om3 * np.sin(self.gamma) - self.Om2 * np.cos(self.gamma)
         )
+
+        self.psi = self.psi + psi * self.dt
+        self.teta = self.teta + teta * self.dt
+        self.gamma = self.gamma + gamma * self.dt
 
         # print(psi_dot, teta_dot, gamma_dot)
 
         # print(-self.Mg_zsk, self.dH, self.MFe, self.MAe)
 
-        Om_dot = (-self.Mg_zsk - self.dH + self.MFe + self.MAe) / self.I
+        self.Om1 = self.Om1 + (
+            (
+                -self.Mg_zsk[0] - self.dH[0] + self.MFe[0] + self.MAe[0]
+            ) / self.I
+        ) * self.dt
+        self.Om2 = self.Om2 + (
+            (
+                -self.Mg_zsk[1] - self.dH[1] + self.MFe[1] + self.MAe[1]
+            ) / self.I
+        ) * self.dt
+        self.Om3 = self.Om3 + (
+            (
+                -self.Mg_zsk[2] - self.dH[2] + self.MFe[2] + self.MAe[2]
+            ) / self.I
+        ) * self.dt
 
         # print(Om_dot)
 
-        omega0_dot = eps0
-        omega1_dot = eps1
-        omega2_dot = eps2
-        omega3_dot = eps3
-        omega4_dot = eps4
-        omega5_dot = eps5
-
-        return np.array([
-            x_dot_,
-            y_dot_,
-            z_dot_,
-            v_dot[0],
-            v_dot[1],
-            v_dot[2],
-            psi_dot,
-            teta_dot,
-            gamma_dot,
-            Om_dot[0],
-            Om_dot[1],
-            Om_dot[2],
-            omega0_dot,
-            omega1_dot,
-            omega2_dot,
-            omega3_dot,
-            omega4_dot,
-            omega5_dot,
-            eps0,
-            eps1,
-            eps2,
-            eps3,
-            eps4,
-            eps5
-        ])
+        self.omega0 = self.omega0 + self.eps0 * self.dt
+        self.omega1 = self.omega1 + self.eps1 * self.dt
+        self.omega2 = self.omega2 + self.eps2 * self.dt
+        self.omega3 = self.omega3 + self.eps3 * self.dt
+        self.omega4 = self.omega4 + self.eps4 * self.dt
+        self.omega5 = self.omega5 + self.eps5 * self.dt
 
     # Управління  МК
     def main_controller(self):
         ay_ = self.vertical_controller()
-        # self.values_formation()
+        self.values_formation()
         # self.angle_controller()
 
         self.eps0 = ay_ * self.m / (2 * self.c[0] * self.omega0)
-        # self.eps5 =
+        # self.eps5 = * self.I[1] / (3 * self.c[5] * self.omega5)
 
     # Регулятор  вертикального  каналу  системи управління
     def vertical_controller(self):
@@ -250,13 +272,15 @@ class BPLA:
             -b ** 2,
             -2 * b
         ])
+        f = lambda t: self.v_zsk - self.Vz_  # noqa
         int_a = self.t  # ???
         int_b = self.t + self.dt  # ???
+
         self.gamma_ = 1 / (self.G[1] * self.m) * (
             self.m * (
-                k[1] * (self.v_zsk - self.Vz_) + k[0] * quad(
-                    self.v_zsk - self.Vz_, int_a, int_b  # ???
-                )
+                k[1] * (self.v_zsk - self.Vz_) + k[0] * np.array([
+                    quad(lambda t: f(t)[i], int_a, int_b)[0] for i in range(3)
+                ])
             ) - self.Fs_zsk[2] + abs(self.c[5]) * self.omega5 ** 2
         )
 
@@ -281,23 +305,22 @@ class BPLA:
             -2 * b
         ])
 
-        d_R = np.array([0, self.x - self.x_, 0, self.z - self.z_])  # ???
-        d_R_zsk = BPLA.quat_mult(
-            BPLA.quat_mult(self.Lam_inv, d_R),
-            self.Lam
-        )
+        x_, z_ = self.vx, self.vz
+
+        d_R = np.quaternion(0, self.x - x_, 0, self.z - z_)  # ???
+        d_R_zsk = (self.Lam.inverse() * d_R * self.Lam).vec
 
         d_vx, _, d_vz = d_R_zsk
 
         self.gamma_ = (
             self.m * (
-                self.k[1] * self.vz + k[0] * d_vz
+                k[1] * self.vz + k[0] * d_vz
             ) - self.Fs[2] + abs(self.c[5]) * self.omega5 ** 2
         ) / (self.G[1] * self.m)
 
         self.teta_ = -(
             self.m * (
-                self.k[1] * self.vx + self.k[0] * d_vx
+                k[1] * self.vx + k[0] * d_vx
             ) - self.Fs[0]
         ) / (self.G[1] * self.m)
 
@@ -317,6 +340,7 @@ class BPLA:
         Fe_zsk = np.sum(self.F, axis=0)  # Сумарний вектор
 
         # кватерніон орієнтації ЗСК відносно ІСК
+        print(self.psi)
         Lam_psi = np.quaternion(
             np.cos(self.psi/2),
             0,
@@ -335,7 +359,7 @@ class BPLA:
             0,
             0
         )
-        Lam = Lam_psi * Lam_teta * Lam_gamma
+        self.Lam = Lam_psi * Lam_teta * Lam_gamma
 
         # 4
 
@@ -345,20 +369,25 @@ class BPLA:
             Fe_zsk[1],
             Fe_zsk[2]
         )
-        self.Fe = (Lam * Phiez * Lam.inverse()).vec
+        self.Fe = (self.Lam * Phiez * self.Lam.inverse()).vec
 
         # 5
         v = np.quaternion(0, self.vx, self.vy, self.vz)
-        v_zsk = (Lam.inverse() * v * Lam).vec
+        self.v_zsk = (self.Lam.inverse() * v * self.Lam).vec
 
+        self.Fs_zsk = np.array([
+            -self.Ks[0] * self.v_zsk[0] ** 2 * np.sign(self.v_zsk[0]),
+            -self.Ks[1] * self.v_zsk[1] ** 2 * np.sign(self.v_zsk[1]),
+            -self.Ks[2] * self.v_zsk[2] ** 2 * np.sign(self.v_zsk[2])
+        ])
         Fs_zsk = np.quaternion(
             0,
-            -self.Ks[0] * v_zsk[0] ** 2 * np.sign(v_zsk[0]),
-            -self.Ks[1] * v_zsk[1] ** 2 * np.sign(v_zsk[1]),
-            -self.Ks[2] * v_zsk[2] ** 2 * np.sign(v_zsk[2])
+            -self.Ks[0] * self.v_zsk[0] ** 2 * np.sign(self.v_zsk[0]),
+            -self.Ks[1] * self.v_zsk[1] ** 2 * np.sign(self.v_zsk[1]),
+            -self.Ks[2] * self.v_zsk[2] ** 2 * np.sign(self.v_zsk[2])
         )
 
-        self.Fs = (Lam * Fs_zsk * Lam.inverse()).vec
+        self.Fs = (self.Lam * Fs_zsk * self.Lam.inverse()).vec
 
         # 6
 

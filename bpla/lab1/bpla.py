@@ -1,6 +1,8 @@
 from classes.BPLA import BPLA
 import numpy as np
 
+time = 13
+
 # Головні моменти інерції МК
 I = np.array([  # noqa
     1.8,
@@ -82,7 +84,11 @@ omega4 = 10.0 * 2 * np.pi
 omega5 = 16.0 * 2 * np.pi
 
 
-def start_bpla(state=[]):
+def start_bpla(ts=None, state=[]):
+
+    if not ts:
+        global time
+        ts = time
 
     if len(state) != 24:
         state = np.array([
@@ -105,6 +111,7 @@ def start_bpla(state=[]):
         ])
 
     bpla = BPLA(
+        ts,
         I, m, dt, J, J0, Kf, Kf0,
         Km, Km0, p, G, Ks, H_, pos,
         Vx_, Vymax, Vz_, c,
