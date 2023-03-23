@@ -1,106 +1,45 @@
+import pandas as pd
 import numpy as np
-from bpla import start_bpla
 
-time = 0.1
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+pd.set_option('display.max_colwidth', None)
 
-X0 = 0.0
-Y0 = 50.0
-Z0 = 0.0
-Vx0 = 0.0
-Vy0 = 0.0
-Vz0 = 0.0
-
-psi0 = 0.0
-teta0 = 0.0
-gamma0 = 0.0
-Om1 = 0.0  # вектор кутової швидкості МК
-Om2 = 0.0  # вектор кутової швидкості МК
-Om3 = 0.0  # вектор кутової швидкості МК
-eps0 = 0
-eps1 = 0
-eps2 = 0
-eps3 = 0
-eps4 = 0
-eps5 = 0
-omega0 = 21.0 * 2 * np.pi
-omega1 = 10.0 * 2 * np.pi
-omega2 = 10.0 * 2 * np.pi
-omega3 = 10.0 * 2 * np.pi
-omega4 = 10.0 * 2 * np.pi
-omega5 = 16.0 * 2 * np.pi
+path = 'out/states.xlsx'
+df = pd.read_excel(path)
 
 
-def f(state):
-    states = start_bpla(time, state)
-    return states[-1][6:9]
+def getRow(lineNum):
+    return df.iloc[lineNum]
 
 
-direction = 1  # 1 - увеличение, -1 - уменьшение
-min_psi, min_teta, min_gamma = f(np.array([
-    X0, Y0, Z0,
-    Vx0, Vy0, Vz0,
-    psi0, teta0, gamma0,
-    Om1, Om2, Om3,
-    omega0,
-    omega1,
-    omega2,
-    omega3,
-    omega4,
-    omega5,
-    eps0,
-    eps1,
-    eps2,
-    eps3,
-    eps4,
-    eps5
-]))
-prev_psi, prev_teta, prev_gamma = min_psi, min_teta, min_gamma
+def printDiff(diff):
+    for title, series in diff.iteritems():
+        if abs(series) > 1:
+            print(title, series)
 
-best_omega5 = omega5 / (2 * np.pi)
-eps = 0.01  # шаг
 
-directionChanged = False
+if __name__ == '__main__':
+    row0 = getRow(826)
+    row1 = getRow(827)
+    row2 = getRow(828)
+    row3 = getRow(829)
 
-while True:
+    printDiff(row1 - row0)
+    print('\n')
+    printDiff(row2 - row1)
+    print('\n', 'Шось не то')
+    printDiff(row3 - row2)
 
-    state = np.array([
-        X0, Y0, Z0,
-        Vx0, Vy0, Vz0,
-        psi0, teta0, gamma0,
-        Om1, Om2, Om3,
-        omega0,
-        omega1,
-        omega2,
-        omega3,
-        omega4,
-        omega5,
-        eps0,
-        eps1,
-        eps2,
-        eps3,
-        eps4,
-        eps5
-    ])
+    psi = row0.psi + (
+        row1.Om3 * np.sin(row1.gamma) - row1.Om2 * np.cos(row1.gamma)
+    ) / np.cos(row1.teta) * 0.01
 
-    psi, teta, gamma = f(state)
+    print(psi)
 
-    print(abs(teta), abs(min_teta))
+    psi = row1.psi + (
+        row2.Om3 * np.sin(row2.gamma) - row2.Om2 * np.cos(row2.gamma)
+    ) / np.cos(row2.teta) * 0.01
 
-    if abs(teta) < abs(min_teta):
-        min_teta = teta
-        best_omega5 = omega5 / (2 * np.pi)
-        directionChanged = False
-    elif abs(teta) > abs(prev_teta):
-
-        if directionChanged:
-            break
-
-        direction = -direction
-        directionChanged = True
-
-    else:
-        omega5 = (omega5 / (2 * np.pi) + eps * direction) * 2 * np.pi
-
-    prev_teta = teta
-
-print("Best Omega:", best_omega5, "Min teta:", min_teta)
+    print(psi)

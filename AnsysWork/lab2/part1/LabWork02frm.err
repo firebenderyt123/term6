@@ -31,3 +31,24 @@
  *** ERROR ***                           CP =       5.351   TIME= 23:04:14
  This function requires selected areas.                                  
   No areas are currently selected.                                       
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:13:12
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:38:04
+
+ *** ERROR ***                           CP =       0.312   TIME= 22:38:05
+ You are attempting to read an ANSYS file that was created on a later    
+ release (Release 23.1) than the one currently executing (Release        
+ 20221128).  The file C:\Users\FIRE\Downloads\Telegram Desktop\laba_1    
+ (2)\laba_1\laba.dbb was not RESUMEd.                                    
+
+ *** WARNING ***                         CP =       0.312   TIME= 22:38:05
+ WHILE PROCESSING FILE BASED INPUT (/INPUT OR MACRO) AN ERROR HAS        
+ OCCURRED.  SHOULD INPUT PROCESSING BE SUSPENDED?                        
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:43:08
+
+ *** WARNING ***                         CP =       2.340   TIME= 22:45:08
+ No previous ZOOM or more than five backward ZOOMs in window 1.  The     
+ /ZOOM command is ignored.                                               
+
+ *** WARNING ***                         CP =       2.465   TIME= 22:45:33
+ No previous ZOOM or more than five backward ZOOMs in window 1.  The     
+ /ZOOM command is ignored.                                               

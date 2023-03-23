@@ -42,7 +42,7 @@ Ks = np.array([
 
 # Потрібна висота та  потрібні  координати
 H_ = 170
-pos = np.array([
+end_pos = np.array([
     1500,
     0,
     800
@@ -57,63 +57,51 @@ c = np.array([1, 1, 1, 1, 1, 1])
 
 # Початкові умови
 
-X0 = 0.0
-Y0 = 50.0
-Z0 = 0.0
-Vx0 = 0.0
-Vy0 = 0.0
-Vz0 = 0.0
+pos = np.array([
+    0.0,
+    50.0,
+    0.0
+])
+v = np.array([
+    0.0,
+    0.0,
+    0.0
+])
 
-psi0 = 0.0
-teta0 = 0.0
-gamma0 = 0.0
-Om1 = 0.0  # вектор кутової швидкості МК
-Om2 = 0.0  # вектор кутової швидкості МК
-Om3 = 0.0  # вектор кутової швидкості МК
-eps0 = 0
-eps1 = 0
-eps2 = 0
-eps3 = 0
-eps4 = 0
-eps5 = 0
-omega0 = 21.0 * 2 * np.pi
-omega1 = 10.0 * 2 * np.pi
-omega2 = 10.0 * 2 * np.pi
-omega3 = 10.0 * 2 * np.pi
-omega4 = 10.0 * 2 * np.pi
-omega5 = 16.0 * 2 * np.pi
+psi = 0.0
+teta = 0.0
+gamma = 0.0
+Om = np.array([0.0, 0.0, 0.0])  # вектор кутової швидкості МК
+eps = np.array([
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+])
+omega = np.array([
+    21.0 * 2 * np.pi,
+    10.0 * 2 * np.pi,
+    10.0 * 2 * np.pi,
+    10.0 * 2 * np.pi,
+    10.0 * 2 * np.pi,
+    17.0 * 2 * np.pi
+])
 
 
-def start_bpla(ts=None, state=[]):
+def start_bpla():
 
-    if not ts:
-        global time
-        ts = time
-
-    if len(state) != 24:
-        state = np.array([
-            X0, Y0, Z0,
-            Vx0, Vy0, Vz0,
-            psi0, teta0, gamma0,
-            Om1, Om2, Om3,
-            omega0,
-            omega1,
-            omega2,
-            omega3,
-            omega4,
-            omega5,
-            eps0,
-            eps1,
-            eps2,
-            eps3,
-            eps4,
-            eps5
-        ])
+    state = [
+        pos, v,
+        psi, teta, gamma,
+        Om, omega, eps
+    ]
 
     bpla = BPLA(
-        ts,
+        time,
         I, m, dt, J, J0, Kf, Kf0,
-        Km, Km0, p, G, Ks, H_, pos,
+        Km, Km0, p, G, Ks, H_, end_pos,
         Vx_, Vymax, Vz_, c,
         state
     )
