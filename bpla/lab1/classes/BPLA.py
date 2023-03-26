@@ -169,7 +169,7 @@ class BPLA:
             # вивід поточного стану кожну секунду
             if (i % (num_steps / ts) == 0):
                 self.t = i / (num_steps / ts)
-                # print(f'{self.t}/{ts}', state)
+                print(f'{self.t} {self.pos} [{self.psi}, {self.teta}, {self.gamma}]')  # noqa
 
             self.calc_forces()
             # self.main_controller()
@@ -217,21 +217,22 @@ class BPLA:
         self.values_formation()
         # self.angle_controller()
 
-        self.eps0 = self.ay * self.m / (2 * self.c[0] * self.omega0)
-        # self.eps5 = * self.I[1] / (3 * self.c[5] * self.omega5)
+        self.eps[0] = self.ay * self.m / (2 * self.c[0] * self.omega[0])
+        # print(self.eps[0])
+        # self.eps[5] = * self.I[1] / (3 * self.c[5] * self.omega5)
 
     # Регулятор  вертикального  каналу  системи управління
     def vertical_controller(self):
         vy_dot = self.Fe[1] / self.m + self.G[1] + self.Fs[1] / self.m
 
-        if abs(self.H_ - self.y) > 20:
+        if abs(self.H_ - self.pos[1]) > 20:
             b = 1
             k = np.array([
                 -b ** 2,
                 -2 * b
             ])
-            ay_ = k[1] * self.vy + k[0] * (
-                vy_dot - self.Vymax * np.sign(self.H_ - self.y)
+            ay_ = k[1] * self.v[1] + k[0] * (
+                vy_dot - self.Vymax * np.sign(self.H_ - self.pos[1])
             )
         else:
             b = 0.5
@@ -240,7 +241,9 @@ class BPLA:
                 -3 * b ** 2,
                 -3 * b
             ])
-            ay_ = k[2] * vy_dot + k[1] * self.vy + k[0] * (self.y - self.H_)
+            ay_ = k[2] * vy_dot + k[1] * self.v[1] + k[0] * (
+                self.pos[1] - self.H_
+            )
 
         self.ay = ay_
 
@@ -296,7 +299,7 @@ class BPLA:
                 k[1] * (self.v_zsk - self.Vz_) + k[0] * np.array([
                     quad(lambda t: f(t)[i], int_a, int_b)[0] for i in range(3)
                 ])
-            ) - self.Fs_zsk[2] + abs(self.c[5]) * self.omega5 ** 2
+            ) - self.Fs_zsk[2] + abs(self.c[5]) * self.omega[5] ** 2
         )
 
         '''
@@ -306,7 +309,7 @@ class BPLA:
         '''
         k1 = -0.1
         self.teta_ = -(
-            self.m * k1 * (self.vx - self.Vx_) - self.Fs[0]
+            self.m * k1 * (self.v[1] - self.Vx_) - self.Fs[0]
         ) / (self.G[1] * self.m)
 
         '''
@@ -320,22 +323,22 @@ class BPLA:
             -2 * b
         ])
 
-        x_, z_ = self.vx, self.vz
+        x_, z_ = self.v[0], self.v[2]
 
-        d_R = np.quaternion(0, self.x - x_, 0, self.z - z_)  # ???
+        d_R = np.quaternion(0, self.pos[0] - x_, 0, self.pos[2] - z_)  # ???
         d_R_zsk = (self.Lam.inverse() * d_R * self.Lam).vec
 
         d_vx, _, d_vz = d_R_zsk
 
         self.gamma_ = (
             self.m * (
-                k[1] * self.vz + k[0] * d_vz
-            ) - self.Fs[2] + abs(self.c[5]) * self.omega5 ** 2
+                k[1] * self.v[2] + k[0] * d_vz
+            ) - self.Fs[2] + abs(self.c[5]) * self.omega[5] ** 2
         ) / (self.G[1] * self.m)
 
         self.teta_ = -(
             self.m * (
-                k[1] * self.vx + k[0] * d_vx
+                k[1] * self.v[0] + k[0] * d_vx
             ) - self.Fs[0]
         ) / (self.G[1] * self.m)
 
