@@ -1,0 +1,114 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       23:35:02
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       23:41:21
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       00:22:09
+
+ *** ERROR ***                           CP =       6.115   TIME= 00:39:02
+ Cannot find line that would intersect line 4 at 45 degrees.             
+
+ *** ERROR ***                           CP =       6.162   TIME= 00:39:06
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       6.256   TIME= 00:39:22
+ Cannot find line that would intersect line 4 at 135 degrees.            
+
+ *** ERROR ***                           CP =       6.287   TIME= 00:39:24
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       6.396   TIME= 00:40:05
+ Cannot find line that would intersect line 4 at 135 degrees.            
+
+ *** ERROR ***                           CP =       6.443   TIME= 00:40:07
+ The line cannot be generated as required.                               
+
+ *** ERROR ***                           CP =       6.568   TIME= 00:40:25
+ Cannot find line that would intersect line 6 at 45 degrees.             
+
+ *** ERROR ***                           CP =       6.599   TIME= 00:40:27
+ The line cannot be generated as required.                               
+
+ *** WARNING ***                         CP =      30.186   TIME= 01:29:58
+ The EPLOT command cannot be executed.  The selected elements cannot be  
+ displayed by PowerGraphics.  To correct this situation, select          
+ different elements or turn off PowerGraphics.                           
+
+ *** WARNING ***                         CP =      30.514   TIME= 01:30:40
+ No previous ZOOM or more than five backward ZOOMs in window 1.  The     
+ /ZOOM command is ignored.                                               
+
+ *** ERROR ***                           CP =      32.214   TIME= 01:38:31
+ Cannot create specified line between lines 9 and 2                      
+  with angles 45 and 45.                                                 
+
+ *** WARNING ***                         CP =      32.308   TIME= 01:38:53
+ The intersection is at the end of the line.  A keypoint cannot be       
+ created there.                                                          
+
+ *** WARNING ***                         CP =      35.038   TIME= 01:48:31
+ Some of the requested areas to be subtracted were also included in the  
+ selected set to be operated on.  These areas have been removed from     
+ the area to be operated on list.                                        
+
+ *** ERROR ***                           CP =      38.735   TIME= 01:55:10
+ Area list to be operated on is empty.                                   
+
+ *** ERROR ***                           CP =      39.125   TIME= 01:56:26
+ This function requires defined nodes.                                   
+  No nodes are currently defined.                                        
+
+ *** ERROR ***                           CP =      39.390   TIME= 01:56:36
+ This function requires defined volumes.                                 
+  No volumes are currently defined.                                      
+
+ *** WARNING ***                         CP =      40.966   TIME= 01:58:23
+ Some of the requested areas to be subtracted were also included in the  
+ selected set to be operated on.  These areas have been removed from     
+ the area to be operated on list.                                        
+
+ *** ERROR ***                           CP =      41.559   TIME= 01:58:42
+ This function requires defined keypoints.                               
+  No keypoints are currently defined.                                    
+
+ *** ERROR ***                           CP =      42.198   TIME= 02:00:31
+ Area list to be subtracted is empty.                                    
+
+ *** ERROR ***                           CP =      42.276   TIME= 02:00:37
+ Area list to be operated on is empty.                                   
+
+ *** WARNING ***                         CP =      43.306   TIME= 02:01:29
+ Some of the requested areas to be subtracted were also included in the  
+ selected set to be operated on.  These areas have been removed from     
+ the area to be operated on list.                                        
+
+ *** ERROR ***                           CP =      43.337   TIME= 02:01:29
+ Boolean operation failed.  Try adjusting the tolerance value on the     
+ BTOL command to some fraction of the minimum keypoint distance.Model    
+ Size (current problem) 5.986905e-02, current BTOL setting               
+ 1.000000e-05, minimum KPT distance 1.500000e-02.                        
+
+ *** ERROR ***                           CP =      44.647   TIME= 02:05:29
+ Area list to be operated on is empty.                                   
+
+ *** WARNING ***                         CP =      44.757   TIME= 02:05:40
+ Some of the requested areas to be subtracted were also included in the  
+ selected set to be operated on.  These areas have been removed from     
+ the area to be operated on list.                                        
+
+ *** WARNING ***                         CP =      46.395   TIME= 02:09:24
+ Some of the requested areas to be subtracted were also included in the  
+ selected set to be operated on.  These areas have been removed from     
+ the area to be operated on list.                                        
+
+ *** WARNING ***                         CP =      47.736   TIME= 02:11:11
+ Some of the requested areas to be subtracted were also included in the  
+ selected set to be operated on.  These areas have been removed from     
+ the area to be operated on list.                                        
+
+ *** WARNING ***                         CP =      48.407   TIME= 02:11:38
+ Some of the requested areas to be subtracted were also included in the  
+ selected set to be operated on.  These areas have been removed from     
+ the area to be operated on list.                                        
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       08:43:09
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       08:44:03
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       08:46:07
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       08:46:47
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       08:57:07

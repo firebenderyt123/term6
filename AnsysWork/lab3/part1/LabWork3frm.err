@@ -1,0 +1,14 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:50:46
+
+ *** ERROR ***                           CP =       7.410   TIME= 23:18:44
+ This function requires selected elements.                               
+  No elements are currently selected.                                    
+
+ *** ERROR ***                           CP =      10.109   TIME= 23:28:35
+ Missing separator between two fields.                                   
+
+ *** ERROR ***                           CP =      10.124   TIME= 23:28:37
+ The above error occurred processing field= X-Z PLANE Y                  
+  Line=                                                                  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       23:31:43
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       23:33:57
