@@ -91,7 +91,6 @@ def draw_plot(time, df_list, dT):
     plt.xlabel('Час, с')
     plt.ylabel('Похибка, град/год')
     plt.grid()
-    plt.show()
 
     plt.plot(time, dT)
     plt.xlabel('Час, с')
@@ -102,7 +101,7 @@ def draw_plot(time, df_list, dT):
 
 def start():
     N, df_list, dT = calc()
-    # draw_plot(np.arange(N), df_list, dT)
+    draw_plot(np.arange(N), df_list, dT)
 
 
 if __name__ == "__main__":
