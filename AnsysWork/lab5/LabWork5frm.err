@@ -1,0 +1,66 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       19:13:41
+
+ *** ERROR ***                           CP =       7.550   TIME= 19:28:04
+ This function requires defined nodes.                                   
+  No nodes are currently defined.                                        
+
+ *** ERROR ***                           CP =      66.753   TIME= 20:26:39
+ Keypoint 20 is referenced by only one line.  Improperly connected line  
+ set for AL command.                                                     
+
+ *** ERROR ***                           CP =      67.439   TIME= 20:26:52
+ Keypoint 21 is referenced by only one line.  Improperly connected line  
+ set for AL command.                                                     
+
+ *** ERROR ***                           CP =      71.448   TIME= 20:27:53
+ Keypoint 16 is referenced by only one line.  Improperly connected line  
+ set for AL command.                                                     
+
+ *** ERROR ***                           CP =      72.821   TIME= 20:28:32
+ Keypoint 16 is referenced by only one line.  Improperly connected line  
+ set for AL command.                                                     
+
+ *** ERROR ***                           CP =      74.490   TIME= 20:29:33
+ Keypoint 61 is referenced by only one line.  Improperly connected line  
+ set for AL command.                                                     
+
+ *** ERROR ***                           CP =      75.848   TIME= 20:33:14
+ Lines cross each other on area 45.                                      
+
+ *** WARNING ***                         CP =      75.941   TIME= 20:33:15
+ May create undesirable entities due to incomplete drag operation.       
+
+ *** ERROR ***                           CP =      78.297   TIME= 20:34:09
+ The drag direction (from the keypoint on drag line 102 that is closest  
+ to a keypoint KP of the given area 35) is orthogonal to the area        
+ normal at that KP.  Area cannot be dragged by the VDRAG command.        
+
+ *** WARNING ***                         CP =      78.312   TIME= 20:34:10
+ May create undesirable entities due to incomplete drag operation.       
+
+ *** WARNING ***                         CP =      83.242   TIME= 20:36:52
+ Keypoint 75 is far away from the plane normal to the beginning of the   
+ drag line path 103.  The line produced may be a poor approximation of   
+ the drag line path.  For better approximation minimize this distance.   
+
+ *** WARNING ***                         CP =      83.273   TIME= 20:36:52
+ Keypoint 74 is far away from the plane normal to the beginning of the   
+ drag line path 103.  The line produced may be a poor approximation of   
+ the drag line path.  For better approximation minimize this distance.   
+
+ *** ERROR ***                           CP =      83.289   TIME= 20:36:52
+ Lines cross each other on area 48.                                      
+
+ *** WARNING ***                         CP =      83.336   TIME= 20:36:53
+ May create undesirable entities due to incomplete drag operation.       
+
+ *** WARNING ***                         CP =      85.317   TIME= 20:37:37
+ Keypoint 75 is far away from the plane normal to the beginning of the   
+ drag line path 104.  The line produced may be a poor approximation of   
+ the drag line path.  For better approximation minimize this distance.   
+
+ *** ERROR ***                           CP =      85.348   TIME= 20:37:37
+ Lines cross each other on area 49.                                      
+
+ *** WARNING ***                         CP =      85.379   TIME= 20:37:39
+ May create undesirable entities due to incomplete drag operation.       

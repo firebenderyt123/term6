@@ -1,0 +1,70 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       17:38:41
+
+ *** WARNING ***                         CP =       3.931   TIME= 17:46:03
+ No previous ZOOM or more than five backward ZOOMs in window 1.  The     
+ /ZOOM command is ignored.                                               
+
+ *** ERROR ***                           CP =      38.563   TIME= 18:24:21
+ Boolean operation failed.  Try adjusting the tolerance value on the     
+ BTOL command to some fraction of the minimum keypoint distance.Model    
+ Size (current problem) 1.405610e-01, current BTOL setting               
+ 1.000000e-05, minimum KPT distance 5.247914e-04.                        
+
+ *** ERROR ***                           CP =      40.170   TIME= 18:24:49
+ Boolean operation failed.  Try adjusting the tolerance value on the     
+ BTOL command to some fraction of the minimum keypoint distance.Model    
+ Size (current problem) 1.405610e-01, current BTOL setting               
+ 1.000000e-05, minimum KPT distance 5.247914e-04.                        
+
+ *** ERROR ***                           CP =      47.861   TIME= 18:27:31
+ Boolean operation failed.  Try adjusting the tolerance value on the     
+ BTOL command to some fraction of the minimum keypoint distance.Model    
+ Size (current problem) 1.405610e-01, current BTOL setting               
+ 1.000000e-05, minimum KPT distance 5.247914e-04.                        
+
+ *** WARNING ***                         CP =      48.251   TIME= 18:28:56
+ Some of the requested volumes to be operated on were also included in   
+ the selected set to be subtracted.  These volumes have been removed     
+ from the volume to be subtracted list.                                  
+
+ *** ERROR ***                           CP =      48.329   TIME= 18:28:56
+ Boolean operation failed.  Try adjusting the tolerance value on the     
+ BTOL command to some fraction of the minimum keypoint distance.Model    
+ Size (current problem) 1.405610e-01, current BTOL setting               
+ 1.000000e-05, minimum KPT distance 5.247914e-04.                        
+
+ *** ERROR ***                           CP =      60.825   TIME= 18:41:21
+ Topological degeneracy detected for VSBV command.  Try modifying        
+ geometry slightly or loosening the tolerance (BTOL command).  If BTOL   
+ is relaxed, be sure to change the tolerance back to the default after   
+ operation.                                                              
+
+ *** ERROR ***                           CP =      64.350   TIME= 18:41:51
+ Topological degeneracy detected for VSBV command.  Try modifying        
+ geometry slightly or loosening the tolerance (BTOL command).  If BTOL   
+ is relaxed, be sure to change the tolerance back to the default after   
+ operation.                                                              
+
+ *** ERROR ***                           CP =      68.235   TIME= 18:46:35
+ Topological degeneracy detected for VSBV command.  Try modifying        
+ geometry slightly or loosening the tolerance (BTOL command).  If BTOL   
+ is relaxed, be sure to change the tolerance back to the default after   
+ operation.                                                              
+
+ *** ERROR ***                           CP =      69.124   TIME= 18:46:46
+ Topological degeneracy detected for VSBV command.  Try modifying        
+ geometry slightly or loosening the tolerance (BTOL command).  If BTOL   
+ is relaxed, be sure to change the tolerance back to the default after   
+ operation.                                                              
+
+ *** ERROR ***                           CP =      69.467   TIME= 18:46:53
+ Topological degeneracy detected for VSBV command.  Try modifying        
+ geometry slightly or loosening the tolerance (BTOL command).  If BTOL   
+ is relaxed, be sure to change the tolerance back to the default after   
+ operation.                                                              
+
+ *** ERROR ***                           CP =      74.007   TIME= 18:47:31
+ Topological degeneracy detected for VSBV command.  Try modifying        
+ geometry slightly or loosening the tolerance (BTOL command).  If BTOL   
+ is relaxed, be sure to change the tolerance back to the default after   
+ operation.                                                              
