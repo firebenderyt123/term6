@@ -1,0 +1,40 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:14:15
+
+ *** ERROR ***                           CP =       2.496   TIME= 22:16:02
+ This function requires selected lines.                                  
+  No lines are currently selected.                                       
+
+ *** WARNING ***                         CP =      43.337   TIME= 00:37:14
+ Lines 47, 57, 58, and 53 do not lie on a common coordinate value in the 
+ currently active coordinate system (CSYS).  A non-planar area (Coons    
+ patch) will be fitted.                                                  
+
+ *** WARNING ***                         CP =      49.125   TIME= 00:38:47
+ Lines 47, 57, 58, and 53 do not lie on a common coordinate value in the 
+ currently active coordinate system (CSYS).  A non-planar area (Coons    
+ patch) will be fitted.                                                  
+
+ *** WARNING ***                         CP =      49.811   TIME= 00:39:36
+ Lines 58, 7, 53, and 0 do not lie on a common coordinate value in the   
+ currently active coordinate system (CSYS).  A non-planar area (Coons    
+ patch) will be fitted.                                                  
+
+ *** WARNING ***                         CP =      49.811   TIME= 00:39:36
+ Lines 58, 57, 19, and 0 do not lie on a common coordinate value in the  
+ currently active coordinate system (CSYS).  A non-planar area (Coons    
+ patch) will be fitted.                                                  
+
+ *** WARNING ***                         CP =      49.827   TIME= 00:39:37
+ Lines 7, 47, 57, and 0 do not lie on a common coordinate value in the   
+ currently active coordinate system (CSYS).  A non-planar area (Coons    
+ patch) will be fitted.                                                  
+
+ *** WARNING ***                         CP =      49.842   TIME= 00:39:37
+ Lines 53, 47, 19, and 0 do not lie on a common coordinate value in the  
+ currently active coordinate system (CSYS).  A non-planar area (Coons    
+ patch) will be fitted.                                                  
+
+ *** WARNING ***                         CP =      52.572   TIME= 00:45:21
+ Lines 58, 57, 47, and 53 do not lie on a common coordinate value in the 
+ currently active coordinate system (CSYS).  A non-planar area (Coons    
+ patch) will be fitted.                                                  
