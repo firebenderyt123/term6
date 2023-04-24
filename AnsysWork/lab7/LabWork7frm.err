@@ -1,0 +1,102 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       00:09:59
+
+ *** ERROR ***                           CP =       2.356   TIME= 00:18:22
+ Missing separator between two fields.                                   
+
+ *** ERROR ***                           CP =       2.387   TIME= 00:18:25
+ The above error occurred processing field= 3NODE3                       
+  Line= ET,2, 3 node 3.                                                  
+
+ *** WARNING ***                         CP =       2.387   TIME= 00:18:26
+ Undefined parameter used in field 3 (3NODE3)                            
+  Line= ET,2, 3 node 3.                                                  
+
+ *** WARNING ***                         CP =       2.387   TIME= 00:18:26
+ 3NODE3 is not a valid element name.  Element name used is LINK33.       
+
+ *** WARNING ***                         CP =       2.402   TIME= 00:18:26
+ 3NODE3 is not a valid element name.  Element name used is LINK33.       
+
+ *** ERROR ***                           CP =       2.590   TIME= 00:20:27
+ For element type = 1 (BEAM189), KEYOPT(9) = 9 is invalid.               
+
+ *** WARNING ***                         CP =      10.764   TIME= 00:53:39
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** WARNING ***                         CP =      11.014   TIME= 00:54:41
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** WARNING ***                         CP =      11.669   TIME= 00:56:08
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** WARNING ***                         CP =      14.274   TIME= 01:01:32
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** WARNING ***                         CP =      15.460   TIME= 01:04:33
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** WARNING ***                         CP =      15.584   TIME= 01:04:55
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** WARNING ***                         CP =      15.631   TIME= 01:05:25
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** WARNING ***                         CP =      15.772   TIME= 01:05:48
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** WARNING ***                         CP =      15.881   TIME= 01:06:17
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** WARNING ***                         CP =      15.912   TIME= 01:06:31
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+
+ *** ERROR ***                           CP =      21.388   TIME= 01:20:05
+ Element 1 requires material properties and references material number 1 
+ for which no properties are defined.  Checking terminates.              
+
+ *** ERROR ***                           CP =      21.419   TIME= 01:20:11
+ The step data was checked and there were errors found.                  
+  Please check output or errors file (                                   
+ B:\KPI\term6\AnsysWork\lab7\LabWork7frm.err ) for messages.             
+
+ *** ERROR ***                           CP =      21.481   TIME= 01:20:22
+ Element 1 requires material properties and references material number 1 
+ for which no properties are defined.  Checking terminates.              
+
+ *** ERROR ***                           CP =      21.528   TIME= 01:20:27
+ The step data was checked and there were errors found.                  
+  Please check output or errors file (                                   
+ B:\KPI\term6\AnsysWork\lab7\LabWork7frm.err ) for messages.             
+
+ *** WARNING ***                         CP =      23.619   TIME= 01:25:21
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       01:31:05
+
+ *** WARNING ***                         CP =       1.591   TIME= 01:31:19
+ No previous ZOOM or more than five backward ZOOMs in window 1.  The     
+ /ZOOM command is ignored.                                               
+
+ *** WARNING ***                         CP =       1.685   TIME= 01:31:24
+ The EPLOT command cannot be executed.  The selected elements cannot be  
+ displayed by PowerGraphics.  To correct this situation, select          
+ different elements or turn off PowerGraphics.                           
+
+ *** WARNING ***                         CP =       1.810   TIME= 01:31:44
+ The EPLOT command cannot be executed.  The selected elements cannot be  
+ displayed by PowerGraphics.  To correct this situation, select          
+ different elements or turn off PowerGraphics.                           
+
+ *** WARNING ***                         CP =       3.510   TIME= 01:34:14
+ The requested database is not available.  The ETABLE command is         
+ ignored.                                                                
