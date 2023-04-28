@@ -1,0 +1,1544 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:44:43
+
+ *** ERROR ***                           CP =       7.894   TIME= 22:53:16
+ This function requires defined volumes.                                 
+  No volumes are currently defined.                                      
+
+ *** ERROR ***                           CP =       7.940   TIME= 22:53:20
+ This function requires defined volumes.                                 
+  No volumes are currently defined.                                      
+
+ *** ERROR ***                           CP =       8.518   TIME= 22:54:00
+ A volume with zero volume could be created by the VEXT command.         
+ Command ignored.                                                        
+
+ *** ERROR ***                           CP =      16.006   TIME= 23:13:03
+ Areas are not planar or not in the same plane.                          
+
+ *** ERROR ***                           CP =      20.561   TIME= 23:33:45
+ Area 3 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.608   TIME= 23:34:36
+ Area 4 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.670   TIME= 23:34:41
+ Area 5 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.701   TIME= 23:34:44
+ Area 6 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.733   TIME= 23:34:45
+ Area 7 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.733   TIME= 23:34:46
+ Area 8 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.764   TIME= 23:34:46
+ Area 9 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.779   TIME= 23:34:47
+ Area 10 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.795   TIME= 23:34:48
+ Area 11 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.842   TIME= 23:34:49
+ Area 12 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.873   TIME= 23:34:50
+ Area 13 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.920   TIME= 23:34:51
+ Area 14 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.951   TIME= 23:34:53
+ Area 15 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.982   TIME= 23:34:54
+ Area 16 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      20.998   TIME= 23:34:55
+ Area 17 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.013   TIME= 23:34:56
+ Area 18 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.013   TIME= 23:34:57
+ Area 19 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.045   TIME= 23:34:57
+ Area 20 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.107   TIME= 23:34:58
+ Area 21 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.138   TIME= 23:34:59
+ Area 22 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.154   TIME= 23:34:59
+ Area 23 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.169   TIME= 23:35:00
+ Area 24 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.201   TIME= 23:35:00
+ Area 25 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.232   TIME= 23:35:01
+ Area 26 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.279   TIME= 23:35:03
+ Area 27 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.294   TIME= 23:35:04
+ Area 28 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.088   TIME= 23:38:49
+ Area 3 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.166   TIME= 23:38:57
+ Area 4 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.181   TIME= 23:38:58
+ Area 5 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.213   TIME= 23:38:59
+ Area 6 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.244   TIME= 23:38:59
+ Area 7 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.275   TIME= 23:39:00
+ Area 8 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.306   TIME= 23:39:00
+ Area 9 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.322   TIME= 23:39:00
+ Area 10 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.353   TIME= 23:39:01
+ Area 11 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.384   TIME= 23:39:01
+ Area 12 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.415   TIME= 23:39:01
+ Area 13 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.447   TIME= 23:39:01
+ Area 14 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.462   TIME= 23:39:02
+ Area 15 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.493   TIME= 23:39:02
+ Area 16 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.525   TIME= 23:39:02
+ Area 17 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.556   TIME= 23:39:03
+ Area 18 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.587   TIME= 23:39:03
+ Area 19 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.618   TIME= 23:39:03
+ Area 20 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.634   TIME= 23:39:03
+ Area 21 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.665   TIME= 23:39:04
+ Area 22 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.681   TIME= 23:39:04
+ Area 23 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.696   TIME= 23:39:04
+ Area 24 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.727   TIME= 23:39:04
+ Area 25 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.759   TIME= 23:39:05
+ Area 26 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.759   TIME= 23:39:05
+ Area 27 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      33.774   TIME= 23:39:05
+ Area 28 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      36.379   TIME= 23:41:05
+ Areas are not planar or not in the same plane.                          
+
+ *** ERROR ***                           CP =      36.598   TIME= 23:41:13
+ Areas are not planar or not in the same plane.                          
+
+ *** ERROR ***                           CP =      37.440   TIME= 23:41:51
+ Keypoint 1 belongs to 3 line(s) and cannot be altered.                  
+
+ *** ERROR ***                           CP =      37.471   TIME= 23:41:53
+ Keypoint 2 belongs to 3 line(s) and cannot be altered.                  
+
+ *** ERROR ***                           CP =      37.503   TIME= 23:41:53
+ Keypoint 3 belongs to 3 line(s) and cannot be altered.                  
+
+ *** ERROR ***                           CP =      37.534   TIME= 23:41:54
+ Keypoint 4 belongs to 3 line(s) and cannot be altered.                  
+
+ *** ERROR ***                           CP =      37.581   TIME= 23:41:54
+ Keypoint 5 belongs to 2 line(s) and cannot be altered.                  
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 6 belongs to 2 line(s) and cannot be altered.                  
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 7 belongs to 2 line(s) and cannot be altered.                  
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 8 belongs to 2 line(s) and cannot be altered.                  
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 9 belongs to 2 line(s) and cannot be altered.                  
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 10 belongs to 2 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 11 belongs to 2 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 12 belongs to 2 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 13 belongs to 2 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 14 belongs to 2 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 15 belongs to 2 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 16 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 17 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 18 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 19 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 20 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 21 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 23 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 24 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 25 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 26 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 27 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 28 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 29 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 30 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 31 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 32 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 33 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 34 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 35 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 36 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 37 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 38 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 39 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 40 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.612   TIME= 23:41:54
+ Keypoint 41 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 42 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 43 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 44 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 45 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 46 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 47 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 48 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 49 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 50 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 51 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 52 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 53 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 54 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 55 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 56 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 57 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 58 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 59 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 60 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 61 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 62 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 63 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.627   TIME= 23:41:54
+ Keypoint 64 belongs to 3 line(s) and cannot be altered.                 
+
+ *** ERROR ***                           CP =      37.799   TIME= 23:42:09
+ Area 1 is attached to 1 volume(s) and cannot be changed.                
+
+ *** ERROR ***                           CP =      37.846   TIME= 23:42:10
+ Area 2 is attached to 1 volume(s) and cannot be changed.                
+
+ *** ERROR ***                           CP =      37.893   TIME= 23:42:11
+ Area 3 is attached to 1 volume(s) and cannot be changed.                
+
+ *** ERROR ***                           CP =      37.924   TIME= 23:42:11
+ Area 4 is attached to 1 volume(s) and cannot be changed.                
+
+ *** ERROR ***                           CP =      37.939   TIME= 23:42:12
+ Area 5 is attached to 1 volume(s) and cannot be changed.                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.971   TIME= 23:42:13
+ Area 6 is attached to 1 volume(s) and cannot be changed.                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.971   TIME= 23:42:13
+ Area 7 is attached to 1 volume(s) and cannot be changed.                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.971   TIME= 23:42:13
+ Area 8 is attached to 1 volume(s) and cannot be changed.                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.971   TIME= 23:42:13
+ Area 9 is attached to 1 volume(s) and cannot be changed.                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.971   TIME= 23:42:13
+ Area 10 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.986   TIME= 23:42:13
+ Area 11 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.986   TIME= 23:42:13
+ Area 12 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.986   TIME= 23:42:13
+ Area 13 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      37.986   TIME= 23:42:13
+ Area 14 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.002   TIME= 23:42:13
+ Area 15 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.002   TIME= 23:42:13
+ Area 16 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.017   TIME= 23:42:13
+ Area 17 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.017   TIME= 23:42:13
+ Area 18 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.017   TIME= 23:42:13
+ Area 19 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.033   TIME= 23:42:13
+ Area 20 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.033   TIME= 23:42:13
+ Area 21 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.049   TIME= 23:42:13
+ Area 22 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.049   TIME= 23:42:13
+ Area 23 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.049   TIME= 23:42:13
+ Area 24 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.064   TIME= 23:42:13
+ Area 25 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.064   TIME= 23:42:13
+ Area 26 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.080   TIME= 23:42:13
+ Area 27 is attached to 1 volume(s) and cannot be changed.               
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      38.080   TIME= 23:42:13
+ Area 28 is attached to 1 volume(s) and cannot be changed.               
+
+ *** WARNING ***                         CP =      39.047   TIME= 23:42:54
+ Intersection is empty for AINA command.  The command has had no         
+ effect.  No new entities created.                                       
+
+ *** ERROR ***                           CP =      40.576   TIME= 23:43:32
+ Element type 1 is PLANE183, which cannot be used with the VMES command. 
+  Meshing of volume 1 aborted.                                           
+
+ *** ERROR ***                           CP =      40.716   TIME= 23:43:37
+ Element type 1 is PLANE183, which cannot be used with the VMES command. 
+  Meshing of volume 1 aborted.                                           
+
+ *** ERROR ***                           CP =      40.903   TIME= 23:43:53
+ Area 1 is irregular.  Cannot be map meshed with quadrilaterals.         
+
+ *** ERROR ***                           CP =      42.978   TIME= 23:44:21
+ Area 3 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.134   TIME= 23:44:32
+ Area 4 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.165   TIME= 23:44:34
+ Area 5 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.212   TIME= 23:44:34
+ Area 6 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.259   TIME= 23:44:35
+ Area 7 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.290   TIME= 23:44:36
+ Area 8 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.321   TIME= 23:44:37
+ Area 9 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.368   TIME= 23:44:38
+ Area 10 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.446   TIME= 23:44:38
+ Area 11 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.462   TIME= 23:44:39
+ Area 12 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.477   TIME= 23:44:39
+ Area 13 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.509   TIME= 23:44:40
+ Area 14 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.555   TIME= 23:44:40
+ Area 15 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.571   TIME= 23:44:41
+ Area 16 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.602   TIME= 23:44:41
+ Area 17 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.618   TIME= 23:44:42
+ Area 18 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.665   TIME= 23:44:42
+ Area 19 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.680   TIME= 23:44:43
+ Area 20 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.711   TIME= 23:44:43
+ Area 21 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.758   TIME= 23:44:43
+ Area 22 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.821   TIME= 23:44:44
+ Area 23 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.883   TIME= 23:44:44
+ Area 24 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.945   TIME= 23:44:45
+ Area 25 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      43.977   TIME= 23:44:45
+ Area 26 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      44.039   TIME= 23:44:46
+ Area 27 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      44.086   TIME= 23:44:46
+ Area 28 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.505   TIME= 23:45:41
+ Area 3 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.552   TIME= 23:45:44
+ Area 4 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.583   TIME= 23:45:45
+ Area 5 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.615   TIME= 23:45:46
+ Area 6 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.677   TIME= 23:45:46
+ Area 7 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.724   TIME= 23:45:47
+ Area 8 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.771   TIME= 23:45:47
+ Area 9 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.817   TIME= 23:45:47
+ Area 10 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.864   TIME= 23:45:48
+ Area 11 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.911   TIME= 23:45:48
+ Area 12 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.942   TIME= 23:45:49
+ Area 13 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      45.989   TIME= 23:45:49
+ Area 14 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.020   TIME= 23:45:50
+ Area 15 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.036   TIME= 23:45:50
+ Area 16 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.083   TIME= 23:45:50
+ Area 17 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.129   TIME= 23:45:51
+ Area 18 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.176   TIME= 23:45:51
+ Area 19 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.207   TIME= 23:45:52
+ Area 20 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.270   TIME= 23:45:52
+ Area 21 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.301   TIME= 23:45:52
+ Area 22 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.363   TIME= 23:45:53
+ Area 23 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.395   TIME= 23:45:53
+ Area 24 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.441   TIME= 23:45:54
+ Area 25 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.488   TIME= 23:45:55
+ Area 26 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.551   TIME= 23:45:56
+ Area 27 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      46.597   TIME= 23:45:57
+ Area 28 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      47.440   TIME= 23:46:39
+ Element type 1 is PLANE183, which cannot be used with the VMES command. 
+  Meshing of volume 1 aborted.                                           
+
+ *** ERROR ***                           CP =      47.721   TIME= 23:47:46
+ Element type 1 is PLANE183, which cannot be used with the LMES          
+ command.  The LMESH operation is aborted at line 1.                     
+
+ *** ERROR ***                           CP =      55.115   TIME= 23:48:38
+ Area 3 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.162   TIME= 23:48:42
+ Area 4 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.209   TIME= 23:48:42
+ Area 5 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.240   TIME= 23:48:43
+ Area 6 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.271   TIME= 23:48:43
+ Area 7 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.302   TIME= 23:48:44
+ Area 8 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.334   TIME= 23:48:45
+ Area 9 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.365   TIME= 23:48:45
+ Area 10 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.380   TIME= 23:48:46
+ Area 11 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.427   TIME= 23:48:46
+ Area 12 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.443   TIME= 23:48:47
+ Area 13 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.474   TIME= 23:48:47
+ Area 14 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.490   TIME= 23:48:48
+ Area 15 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.521   TIME= 23:48:48
+ Area 16 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.536   TIME= 23:48:49
+ Area 17 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.552   TIME= 23:48:49
+ Area 18 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.568   TIME= 23:48:49
+ Area 19 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.568   TIME= 23:48:50
+ Area 20 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.583   TIME= 23:48:50
+ Area 21 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.614   TIME= 23:48:51
+ Area 22 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.646   TIME= 23:48:51
+ Area 23 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.677   TIME= 23:48:52
+ Area 24 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.692   TIME= 23:48:52
+ Area 25 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.708   TIME= 23:48:53
+ Area 26 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.739   TIME= 23:48:53
+ Area 27 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      55.770   TIME= 23:48:53
+ Area 28 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      58.953   TIME= 23:51:01
+ Area 3 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.000   TIME= 23:51:07
+ Area 4 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.078   TIME= 23:51:08
+ Area 5 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.109   TIME= 23:51:09
+ Area 6 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.124   TIME= 23:51:10
+ Area 7 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.156   TIME= 23:51:10
+ Area 8 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.187   TIME= 23:51:10
+ Area 9 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.187   TIME= 23:51:10
+ Area 10 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.202   TIME= 23:51:11
+ Area 11 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.234   TIME= 23:51:11
+ Area 12 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.265   TIME= 23:51:11
+ Area 13 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.280   TIME= 23:51:12
+ Area 14 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.327   TIME= 23:51:12
+ Area 15 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.358   TIME= 23:51:12
+ Area 16 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.390   TIME= 23:51:13
+ Area 17 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.421   TIME= 23:51:13
+ Area 18 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.436   TIME= 23:51:13
+ Area 19 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.468   TIME= 23:51:14
+ Area 20 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.499   TIME= 23:51:14
+ Area 21 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.530   TIME= 23:51:14
+ Area 22 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.577   TIME= 23:51:15
+ Area 23 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.624   TIME= 23:51:15
+ Area 24 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.670   TIME= 23:51:15
+ Area 25 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.686   TIME= 23:51:15
+ Area 26 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.702   TIME= 23:51:16
+ Area 27 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      59.733   TIME= 23:51:16
+ Area 28 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.538   TIME= 23:53:27
+ Area 3 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.709   TIME= 23:53:30
+ Area 4 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.740   TIME= 23:53:31
+ Area 5 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.756   TIME= 23:53:32
+ Area 6 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.772   TIME= 23:53:33
+ Area 7 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.803   TIME= 23:53:33
+ Area 8 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.850   TIME= 23:53:33
+ Area 9 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.881   TIME= 23:53:34
+ Area 10 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.928   TIME= 23:53:34
+ Area 11 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      64.974   TIME= 23:53:34
+ Area 12 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.021   TIME= 23:53:34
+ Area 13 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.052   TIME= 23:53:35
+ Area 14 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.084   TIME= 23:53:35
+ Area 15 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.115   TIME= 23:53:35
+ Area 16 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.146   TIME= 23:53:36
+ Area 17 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.177   TIME= 23:53:36
+ Area 18 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.224   TIME= 23:53:36
+ Area 19 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.255   TIME= 23:53:37
+ Area 20 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.286   TIME= 23:53:37
+ Area 21 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.333   TIME= 23:53:37
+ Area 22 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.364   TIME= 23:53:38
+ Area 23 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.396   TIME= 23:53:38
+ Area 24 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.411   TIME= 23:53:38
+ Area 25 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.458   TIME= 23:53:38
+ Area 26 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.474   TIME= 23:53:38
+ Area 27 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      65.520   TIME= 23:53:39
+ Area 28 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      69.904   TIME= 23:55:41
+ Area 3 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      69.951   TIME= 23:55:44
+ Area 4 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      69.982   TIME= 23:55:44
+ Area 5 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      69.998   TIME= 23:55:45
+ Area 6 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.029   TIME= 23:55:45
+ Area 7 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.044   TIME= 23:55:46
+ Area 8 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.060   TIME= 23:55:46
+ Area 9 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.076   TIME= 23:55:46
+ Area 10 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.091   TIME= 23:55:47
+ Area 11 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.122   TIME= 23:55:47
+ Area 12 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.169   TIME= 23:55:47
+ Area 13 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.200   TIME= 23:55:47
+ Area 14 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.247   TIME= 23:55:48
+ Area 15 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.263   TIME= 23:55:48
+ Area 16 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.310   TIME= 23:55:48
+ Area 17 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.325   TIME= 23:55:48
+ Area 18 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.356   TIME= 23:55:49
+ Area 19 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.388   TIME= 23:55:49
+ Area 20 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.419   TIME= 23:55:49
+ Area 21 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.466   TIME= 23:55:50
+ Area 22 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.512   TIME= 23:55:50
+ Area 23 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.544   TIME= 23:55:50
+ Area 24 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.575   TIME= 23:55:51
+ Area 25 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.590   TIME= 23:55:51
+ Area 26 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.606   TIME= 23:55:52
+ Area 27 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      70.637   TIME= 23:55:52
+ Area 28 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      83.398   TIME= 00:17:59
+ Data file LabWork8frm.db does not exist for RESUME.                     
+
+ *** WARNING ***                         CP =      92.524   TIME= 00:27:09
+ Line 9 has no nodes associated with it.  Constraint not transferred.    
+
+ *** WARNING ***                         CP =      92.524   TIME= 00:27:09
+ Line 29 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =      92.524   TIME= 00:27:09
+ Line 30 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =      92.524   TIME= 00:27:09
+ Line 46 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =      92.524   TIME= 00:27:09
+ Selected areas attached to line 19 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      92.524   TIME= 00:27:09
+ Selected areas attached to line 22 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      92.524   TIME= 00:27:09
+ Selected areas attached to line 41 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      92.524   TIME= 00:27:09
+ Selected areas attached to line 42 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      92.524   TIME= 00:27:09
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =      92.914   TIME= 00:27:19
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      93.117   TIME= 00:27:23
+ During this session the elapsed time exceeds the CPU time by 6530%.     
+ Often this indicates either a lack of physical memory (RAM) required    
+ to efficiently handle this simulation or it indicates a particularly    
+ slow hard drive configuration.  This simulation can be expected to run  
+ faster on identical hardware if additional RAM or a faster hard drive   
+ configuration is made available.  For more details, please see the      
+ ANSYS Performance Guide which is part of the ANSYS Help system.         
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       00:28:22
+
+ *** WARNING ***                         CP =       5.226   TIME= 00:40:38
+ Line 9 has no nodes associated with it.  Constraint not transferred.    
+
+ *** WARNING ***                         CP =       5.226   TIME= 00:40:38
+ Line 29 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       5.226   TIME= 00:40:38
+ Line 30 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       5.226   TIME= 00:40:38
+ Line 46 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       5.226   TIME= 00:40:38
+ Selected areas attached to line 19 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       5.226   TIME= 00:40:38
+ Selected areas attached to line 22 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       5.226   TIME= 00:40:38
+ Selected areas attached to line 41 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       5.226   TIME= 00:40:38
+ Selected areas attached to line 42 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       5.242   TIME= 00:40:38
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =       5.538   TIME= 00:40:40
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       00:41:09
+
+ *** WARNING ***                         CP =       3.635   TIME= 00:45:06
+ Line 9 has no nodes associated with it.  Constraint not transferred.    
+
+ *** WARNING ***                         CP =       3.635   TIME= 00:45:06
+ Line 29 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       3.635   TIME= 00:45:06
+ Line 30 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       3.635   TIME= 00:45:06
+ Line 46 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       3.635   TIME= 00:45:06
+ Selected areas attached to line 19 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       3.635   TIME= 00:45:06
+ Selected areas attached to line 22 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       3.635   TIME= 00:45:06
+ Selected areas attached to line 41 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       3.635   TIME= 00:45:06
+ Selected areas attached to line 42 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       3.650   TIME= 00:45:06
+ No constraints have been defined using the D command.                   
+
+ *** WARNING ***                         CP =       3.838   TIME= 00:45:14
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***                           CP =       4.072   TIME= 00:45:15
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       00:45:27
+
+ *** WARNING ***                         CP =       1.856   TIME= 00:45:40
+ Line 9 has no nodes associated with it.  Constraint not transferred.    
+
+ *** WARNING ***                         CP =       1.856   TIME= 00:45:40
+ Line 29 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       1.856   TIME= 00:45:40
+ Line 30 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       1.856   TIME= 00:45:40
+ Line 46 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       1.856   TIME= 00:45:40
+ Selected areas attached to line 19 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.856   TIME= 00:45:40
+ Selected areas attached to line 22 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.856   TIME= 00:45:40
+ Selected areas attached to line 41 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.856   TIME= 00:45:40
+ Selected areas attached to line 42 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.872   TIME= 00:45:40
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =       2.153   TIME= 00:45:41
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       00:45:49
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:46:00
+ Line 9 has no nodes associated with it.  Constraint not transferred.    
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:46:00
+ Line 29 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:46:00
+ Line 30 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:46:00
+ Line 46 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:46:00
+ Selected areas attached to line 19 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.919   TIME= 00:46:00
+ Selected areas attached to line 22 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.919   TIME= 00:46:00
+ Selected areas attached to line 41 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.919   TIME= 00:46:00
+ Selected areas attached to line 42 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.950   TIME= 00:46:00
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =       2.246   TIME= 00:46:26
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       00:47:25
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:47:46
+ Line 9 has no nodes associated with it.  Constraint not transferred.    
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:47:46
+ Line 29 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:47:46
+ Line 30 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:47:46
+ Line 46 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       1.919   TIME= 00:47:46
+ Selected areas attached to line 19 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.919   TIME= 00:47:46
+ Selected areas attached to line 22 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.919   TIME= 00:47:46
+ Selected areas attached to line 41 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.919   TIME= 00:47:46
+ Selected areas attached to line 42 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       1.934   TIME= 00:47:46
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =       2.246   TIME= 00:47:51
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       00:48:38
+
+ *** WARNING ***                         CP =       2.153   TIME= 00:49:15
+ Line 9 has no nodes associated with it.  Constraint not transferred.    
+
+ *** WARNING ***                         CP =       2.153   TIME= 00:49:15
+ Line 29 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       2.153   TIME= 00:49:15
+ Line 30 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       2.153   TIME= 00:49:15
+ Line 46 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       2.153   TIME= 00:49:15
+ Selected areas attached to line 19 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       2.153   TIME= 00:49:15
+ Selected areas attached to line 22 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       2.153   TIME= 00:49:15
+ Selected areas attached to line 41 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       2.153   TIME= 00:49:15
+ Selected areas attached to line 42 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       2.168   TIME= 00:49:15
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =       2.434   TIME= 00:49:19
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       00:49:36
+
+ *** WARNING ***                         CP =       8.424   TIME= 01:13:12
+ Line 56 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       8.424   TIME= 01:13:12
+ Line 57 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       8.424   TIME= 01:13:12
+ Line 58 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       8.424   TIME= 01:13:12
+ Line 59 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***                         CP =       8.424   TIME= 01:13:12
+ Line 82 has no nodes associated with it.  Constraint not transferred.   
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       8.424   TIME= 01:13:12
+ Selected areas attached to line 54 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       8.424   TIME= 01:13:12
+ Selected areas attached to line 55 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       8.424   TIME= 01:13:12
+ Selected areas attached to line 60 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       8.424   TIME= 01:13:12
+ Selected areas attached to line 61 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =       8.424   TIME= 01:13:12
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP =       8.596   TIME= 01:13:14
+ There is at least 1 small equation solver pivot term (e.g., at the UX   
+ degree of freedom of node 2001).  Please check for an insufficiently    
+ constrained model.                                                      
+
+ *** WARNING ***                         CP =      11.528   TIME= 01:13:57
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***                           CP =      11.700   TIME= 01:13:58
+ There is at least 1 small equation solver pivot term (e.g., at the UX   
+ degree of freedom of node 2001).  Please check for an insufficiently    
+ constrained model.                                                      
+
+ *** WARNING ***                         CP =      19.531   TIME= 01:35:46
+ Selected areas attached to line 54 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      19.531   TIME= 01:35:46
+ Selected areas attached to line 55 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      19.531   TIME= 01:35:46
+ Selected areas attached to line 60 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      19.531   TIME= 01:35:46
+ Selected areas attached to line 61 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:24:25
+
+ *** WARNING ***                         CP =       0.359   TIME= 09:24:27
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   

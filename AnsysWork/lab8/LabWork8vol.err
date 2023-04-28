@@ -1,0 +1,216 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       01:52:46
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       01:53:08
+
+ *** ERROR ***                           CP =      17.004   TIME= 02:10:51
+ Element 1 requires material properties and references material number 1 
+ for which no properties are defined.  Checking terminates.              
+
+ *** ERROR ***                           CP =      17.098   TIME= 02:11:50
+ The step data was checked and there were errors found.                  
+  Please check output or errors file (                                   
+ B:\KPI\term6\AnsysWork\lab8\LabWork8vol.err ) for messages.             
+
+ *** ERROR ***                           CP =      19.999   TIME= 02:14:03
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+
+ *** WARNING ***                         CP =      20.140   TIME= 02:14:11
+ During this session the elapsed time exceeds the CPU time by 6234%.     
+ Often this indicates either a lack of physical memory (RAM) required    
+ to efficiently handle this simulation or it indicates a particularly    
+ slow hard drive configuration.  This simulation can be expected to run  
+ faster on identical hardware if additional RAM or a faster hard drive   
+ configuration is made available.  For more details, please see the      
+ ANSYS Performance Guide which is part of the ANSYS Help system.         
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:14:42
+
+ *** ERROR ***                           CP =       5.507   TIME= 02:16:03
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:16:13
+
+ *** ERROR ***                           CP =       4.040   TIME= 02:16:42
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:16:50
+
+ *** WARNING ***                         CP =      11.622   TIME= 02:24:49
+ Area 21 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =      11.622   TIME= 02:24:49
+ Area 22 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =      11.622   TIME= 02:24:49
+ Area 23 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =      11.622   TIME= 02:24:49
+ Area 24 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** ERROR ***                           CP =      13.338   TIME= 02:24:51
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      13.525   TIME= 02:24:56
+ During this session the elapsed time exceeds the CPU time by 3474%.     
+ Often this indicates either a lack of physical memory (RAM) required    
+ to efficiently handle this simulation or it indicates a particularly    
+ slow hard drive configuration.  This simulation can be expected to run  
+ faster on identical hardware if additional RAM or a faster hard drive   
+ configuration is made available.  For more details, please see the      
+ ANSYS Performance Guide which is part of the ANSYS Help system.         
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:25:11
+
+ *** WARNING ***                         CP =       3.682   TIME= 02:27:39
+ Area 21 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       3.682   TIME= 02:27:39
+ Area 22 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       3.682   TIME= 02:27:39
+ Area 23 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       3.682   TIME= 02:27:39
+ Area 24 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** ERROR ***                           CP =       5.413   TIME= 02:27:41
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:28:30
+
+ *** WARNING ***                         CP =       2.808   TIME= 02:30:01
+ Area 21 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       2.808   TIME= 02:30:01
+ Area 22 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       2.808   TIME= 02:30:01
+ Area 23 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       2.808   TIME= 02:30:01
+ Area 24 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** ERROR ***                           CP =       4.555   TIME= 02:30:02
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:30:12
+
+ *** ERROR ***                           CP =       2.012   TIME= 02:33:33
+ There are no nodes defined.                                             
+
+ *** WARNING ***                         CP =       2.886   TIME= 02:34:13
+ Area 21 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       2.886   TIME= 02:34:13
+ Area 22 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       2.886   TIME= 02:34:13
+ Area 23 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       2.886   TIME= 02:34:13
+ Area 24 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** ERROR ***                           CP =       4.618   TIME= 02:34:15
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:38:13
+
+ *** WARNING ***                         CP =       0.359   TIME= 02:38:15
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** WARNING ***                         CP =       2.309   TIME= 02:38:26
+ Area 21 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       2.309   TIME= 02:38:26
+ Area 22 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       2.309   TIME= 02:38:26
+ Area 23 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** WARNING ***                         CP =       2.309   TIME= 02:38:26
+ Area 24 has no nodes associated with it.  Constraint(s) not             
+ transferred.                                                            
+
+ *** ERROR ***                           CP =       4.118   TIME= 02:38:28
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:47:15
+
+ *** WARNING ***                         CP =       0.328   TIME= 02:47:17
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** ERROR ***                           CP =       2.480   TIME= 02:48:38
+ An error occurred while attempting to open the results file             
+ LabWork8vol.rst.                                                        
+
+ *** ERROR ***                           CP =       2.527   TIME= 02:48:44
+ No results file available.                                              
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:52:50
+
+ *** WARNING ***                         CP =       0.312   TIME= 02:52:52
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       08:49:12
+
+ *** WARNING ***                         CP =       0.406   TIME= 08:49:19
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:28:40
+
+ *** WARNING ***                         CP =       0.296   TIME= 09:28:42
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   

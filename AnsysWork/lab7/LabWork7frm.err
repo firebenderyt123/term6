@@ -100,3 +100,22 @@
  *** WARNING ***                         CP =       3.510   TIME= 01:34:14
  The requested database is not available.  The ETABLE command is         
  ignored.                                                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       08:56:11
+
+ *** WARNING ***                         CP =       0.343   TIME= 08:56:12
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** WARNING ***                         CP =       2.574   TIME= 08:59:42
+ KEYOPT is not a recognized POST1 command, abbreviation, or macro.       
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =       2.730   TIME= 09:02:11
+ KEYOPT is not a recognized POST1 command, abbreviation, or macro.       
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =       2.964   TIME= 09:02:24
+ KEYOPT is not a recognized POST1 command, abbreviation, or macro.       
+  This command will be ignored.                                          
