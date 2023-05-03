@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+file = 'out.xlsx'
+
+# Read the CSV file into a DataFrame
+df = pd.read_excel(file)
+
+df['fi'] = np.rad2deg(df['fi'])
+df['omega'] = np.rad2deg(df['omega'])
+df['mu'] = np.rad2deg(df['mu'])
+
+plt.plot(df['t'], df['fi'], label='fi')
+plt.plot(df['t'], df['omega'], label='omega')
+plt.plot(df['t'], df['mu'], label='mu')
+plt.xlabel('Час, сек')
+
+plt.legend()
+plt.show()
