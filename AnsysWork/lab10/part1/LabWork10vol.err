@@ -1,0 +1,27 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       19:20:01
+
+ *** WARNING ***                         CP =       0.328   TIME= 19:20:02
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       23:15:35
+
+ *** WARNING ***                         CP =       0.343   TIME= 23:15:37
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** WARNING ***                         CP =       7.036   TIME= 23:27:57
+ The requested S data is not available.  The PLESOL command is ignored.  
+
+ *** WARNING ***                         CP =       7.519   TIME= 23:28:38
+ The requested S data is not available.  The PLESOL command is ignored.  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       10:06:24
+
+ *** WARNING ***                         CP =       0.406   TIME= 10:06:26
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   

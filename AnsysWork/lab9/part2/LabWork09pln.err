@@ -1,0 +1,17 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       01:55:03
+
+ *** WARNING ***                         CP =       0.312   TIME= 01:55:05
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** ERROR ***                           CP =       9.064   TIME= 02:09:59
+ Line 3 is meshed and cannot be divided.                                 
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:00:35
+
+ *** WARNING ***                         CP =       0.421   TIME= 09:00:37
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   

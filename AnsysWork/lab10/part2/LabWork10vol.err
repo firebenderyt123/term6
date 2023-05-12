@@ -1,0 +1,89 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:33:41
+
+ *** WARNING ***                         CP =       0.328   TIME= 09:33:43
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** ERROR ***                           CP =       7.972   TIME= 09:45:03
+ Arc will be greater than 180 degrees.                                   
+
+ *** ERROR ***                           CP =       8.050   TIME= 09:45:12
+ Arc will be greater than 180 degrees.                                   
+
+ *** WARNING ***                         CP =       8.284   TIME= 09:45:45
+ Arc of radius 1.E-02 not recommended between keypoints 1 and 3.         
+
+ *** ERROR ***                           CP =      10.390   TIME= 09:47:39
+ Keypoint 2 is referenced by only one line.  Improperly connected line   
+ set for AL command.                                                     
+
+ *** ERROR ***                           CP =      10.592   TIME= 09:47:55
+ This function requires defined keypoints.                               
+  No keypoints are currently defined.                                    
+
+ *** ERROR ***                           CP =      11.794   TIME= 09:50:13
+ Arc will be greater than 180 degrees.                                   
+
+ *** ERROR ***                           CP =      12.683   TIME= 09:51:07
+ Keypoint 4 belongs to 1 line(s) and cannot be altered.                  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       10:08:34
+
+ *** WARNING ***                         CP =       0.281   TIME= 10:08:36
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** WARNING ***                         CP =       3.260   TIME= 10:13:32
+ Out of the 480 defined elements, only 48 elements are selected.         
+
+ *** WARNING ***                         CP =       3.323   TIME= 10:13:37
+ There are no active degrees of freedom.                                 
+
+ *** WARNING ***                         CP =       4.103   TIME= 10:15:26
+ The requested S data is not available.  The PLESOL command is ignored.  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       10:15:51
+
+ *** WARNING ***                         CP =       0.374   TIME= 10:15:53
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       10:23:30
+
+ *** WARNING ***                         CP =       0.296   TIME= 10:23:32
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** WARNING ***                         CP =       2.714   TIME= 10:35:05
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =       4.711   TIME= 10:39:27
+ Out of the 480 defined elements, only 48 elements are selected.         
+
+ *** ERROR ***                           CP =       6.068   TIME= 10:42:28
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       10:42:57
+
+ *** WARNING ***                         CP =       0.343   TIME= 10:42:59
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** ERROR ***                           CP =       2.917   TIME= 11:03:51
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                

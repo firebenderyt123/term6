@@ -1,0 +1,14 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       01:20:56
+
+ *** WARNING ***                         CP =       0.343   TIME= 01:20:58
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** ERROR ***                           CP =       2.371   TIME= 01:21:58
+ An error occurred while attempting to open the results file             
+ saveRight.rst.                                                          
+
+ *** ERROR ***                           CP =       2.434   TIME= 01:22:00
+ No results file available.                                              

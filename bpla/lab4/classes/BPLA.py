@@ -170,8 +170,8 @@ class BPLA:
                 self.t = i / (num_steps / ts)
                 print(f'{self.t} {self.pos} [{self.psi}, {self.teta}, {self.gamma}]')  # noqa
 
-            self.main_controller()
             self.calc_forces()
+            self.main_controller()
 
             self.derivative()
 
@@ -351,9 +351,9 @@ class BPLA:
 
         dR_zsk = (self.Lam.inverse() * dR_isk * self.Lam).vec
 
-        self.gamma_star = - (self.m * (k[1] * self.v_zsk[2] + k[0] * dR_zsk[2]) - self.Fs_zsk[2] + self.c[5] * self.omega[5]**2) / (-self.G[1] * self.m)  # noqa
+        self.gamma_star = (self.m * (k[1] * self.v_zsk[2] + k[0] * dR_zsk[2]) - self.Fs_zsk[2] + self.c[5] * self.omega[5]**2) / (-self.G[1] * self.m)  # noqa
 
-        self.teta_star = - (self.m * (k[1] * self.v_zsk[0] + k[0] * dR_zsk[0]) - self.Fs[0]) / (-self.G[1] * self.m)  # noqa
+        self.teta_star = - (self.m * (k[1] * self.v_zsk[0] + k[0] * dR_zsk[0]) - self.Fs_zsk[0]) / (-self.G[1] * self.m)  # noqa
 
     def calc_forces(self):
 

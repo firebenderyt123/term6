@@ -1,0 +1,630 @@
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       18:09:17
+
+ *** WARNING ***                         CP =       0.312   TIME= 18:09:23
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** ERROR ***                           CP =       4.758   TIME= 18:11:19
+ This function requires defined lines.                                   
+  No lines are currently defined.                                        
+
+ *** WARNING ***                         CP =       7.363   TIME= 18:20:16
+ No previous ZOOM or more than five backward ZOOMs in window 1.  The     
+ /ZOOM command is ignored.                                               
+
+ *** ERROR ***                           CP =      11.794   TIME= 18:23:44
+ Line 13 is attached to 1 area(s) and cannot be changed.                 
+
+ *** ERROR ***                           CP =      11.809   TIME= 18:23:48
+ Line 14 is attached to 1 area(s) and cannot be changed.                 
+
+ *** ERROR ***                           CP =      11.825   TIME= 18:23:49
+ Line 15 is attached to 1 area(s) and cannot be changed.                 
+
+ *** ERROR ***                           CP =      11.856   TIME= 18:23:50
+ Line 16 is attached to 1 area(s) and cannot be changed.                 
+
+ *** ERROR ***                           CP =      11.965   TIME= 18:23:55
+ Line 13 is attached to 1 area(s) and cannot be changed.                 
+
+ *** ERROR ***                           CP =      11.996   TIME= 18:23:58
+ Line 14 is attached to 1 area(s) and cannot be changed.                 
+
+ *** ERROR ***                           CP =      12.012   TIME= 18:23:59
+ Line 15 is attached to 1 area(s) and cannot be changed.                 
+
+ *** ERROR ***                           CP =      12.074   TIME= 18:24:00
+ Line 16 is attached to 1 area(s) and cannot be changed.                 
+
+ *** WARNING ***                         CP =      12.355   TIME= 18:24:29
+ This function requires that files currently open be closed.             
+ Executing the function will exit the preprocessor.                      
+
+ *** ERROR ***                           CP =      14.570   TIME= 18:26:30
+ Volume list to be subtracted is empty.                                  
+
+ *** ERROR ***                           CP =      21.419   TIME= 18:40:58
+ Area 3 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.481   TIME= 18:41:07
+ Area 4 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.513   TIME= 18:41:10
+ Area 5 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.528   TIME= 18:41:11
+ Area 6 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.591   TIME= 18:41:12
+ Area 9 is not parallel to the global XY plane.  Cannot mesh with 2-D    
+ planar elements.                                                        
+
+ *** ERROR ***                           CP =      21.637   TIME= 18:41:14
+ Area 10 is not parallel to the global XY plane.  Cannot mesh with 2-D   
+ planar elements.                                                        
+
+ *** WARNING ***                         CP =      41.559   TIME= 19:04:30
+ Constraints on unmeshed keypoint 13 are not transferred.                
+
+ *** WARNING ***                         CP =      41.574   TIME= 19:04:30
+ Constraints on unmeshed keypoint 14 are not transferred.                
+
+ *** WARNING ***                         CP =      41.605   TIME= 19:04:30
+ Constraints on unmeshed keypoint 15 are not transferred.                
+
+ *** WARNING ***                         CP =      41.605   TIME= 19:04:30
+ Constraints on unmeshed keypoint 16 are not transferred.                
+
+ *** WARNING ***                         CP =      41.621   TIME= 19:04:30
+ Constraints on unmeshed keypoint 38 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 45 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 46 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 47 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 48 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 49 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 50 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 51 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 52 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 53 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 54 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 55 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 56 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 57 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 58 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 59 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      41.637   TIME= 19:04:30
+ Surface loads on unmeshed line 60 are not transferred.                  
+
+ *** WARNING ***                         CP =      42.651   TIME= 19:05:30
+ Constraints on unmeshed keypoint 13 are not transferred.                
+
+ *** WARNING ***                         CP =      42.651   TIME= 19:05:30
+ Constraints on unmeshed keypoint 14 are not transferred.                
+
+ *** WARNING ***                         CP =      42.651   TIME= 19:05:30
+ Constraints on unmeshed keypoint 15 are not transferred.                
+
+ *** WARNING ***                         CP =      42.651   TIME= 19:05:30
+ Constraints on unmeshed keypoint 16 are not transferred.                
+
+ *** WARNING ***                         CP =      42.651   TIME= 19:05:30
+ Constraints on unmeshed keypoint 38 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 45 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 46 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 47 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 48 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 49 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 50 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 51 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 52 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 53 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 54 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 55 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 56 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 57 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 58 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 59 are not transferred.                  
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      42.651   TIME= 19:05:30
+ Surface loads on unmeshed line 60 are not transferred.                  
+
+ *** WARNING ***                         CP =      51.808   TIME= 19:15:28
+ Constraints on unmeshed keypoint 13 are not transferred.                
+
+ *** WARNING ***                         CP =      51.808   TIME= 19:15:28
+ Constraints on unmeshed keypoint 14 are not transferred.                
+
+ *** WARNING ***                         CP =      51.808   TIME= 19:15:28
+ Constraints on unmeshed keypoint 15 are not transferred.                
+
+ *** WARNING ***                         CP =      51.808   TIME= 19:15:29
+ Constraints on unmeshed keypoint 16 are not transferred.                
+
+ *** WARNING ***                         CP =      51.824   TIME= 19:15:29
+ Constraints on unmeshed keypoint 37 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      51.839   TIME= 19:15:29
+ Constraints on unmeshed keypoint 38 are not transferred.                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:16:09
+
+ *** WARNING ***                         CP =       0.296   TIME= 22:16:11
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** WARNING ***                         CP =      15.023   TIME= 22:18:35
+ Constraints on unmeshed keypoint 5 are not transferred.                 
+
+ *** WARNING ***                         CP =      15.070   TIME= 22:18:35
+ Constraints on unmeshed keypoint 6 are not transferred.                 
+
+ *** WARNING ***                         CP =      15.101   TIME= 22:18:35
+ Constraints on unmeshed keypoint 7 are not transferred.                 
+
+ *** WARNING ***                         CP =      15.116   TIME= 22:18:36
+ Constraints on unmeshed keypoint 8 are not transferred.                 
+
+ *** WARNING ***                         CP =      15.148   TIME= 22:18:36
+ Constraints on unmeshed keypoint 13 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      15.148   TIME= 22:18:36
+ Constraints on unmeshed keypoint 14 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      15.148   TIME= 22:18:36
+ Constraints on unmeshed keypoint 15 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      15.148   TIME= 22:18:36
+ Constraints on unmeshed keypoint 16 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      15.148   TIME= 22:18:36
+ Constraints on unmeshed keypoint 37 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      15.148   TIME= 22:18:36
+ Constraints on unmeshed keypoint 38 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      15.148   TIME= 22:18:36
+ Selected areas attached to line 2 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      15.148   TIME= 22:18:36
+ Selected areas attached to line 4 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      15.148   TIME= 22:18:36
+ Selected areas attached to line 9 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      15.148   TIME= 22:18:36
+ Selected areas attached to line 10 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      16.209   TIME= 22:18:37
+ Constraints on unmeshed keypoint 5 are not transferred.                 
+
+ *** WARNING ***                         CP =      16.224   TIME= 22:18:37
+ Constraints on unmeshed keypoint 6 are not transferred.                 
+
+ *** WARNING ***                         CP =      16.224   TIME= 22:18:37
+ Constraints on unmeshed keypoint 7 are not transferred.                 
+
+ *** WARNING ***                         CP =      16.255   TIME= 22:18:37
+ Constraints on unmeshed keypoint 8 are not transferred.                 
+
+ *** WARNING ***                         CP =      16.271   TIME= 22:18:37
+ Constraints on unmeshed keypoint 13 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.302   TIME= 22:18:37
+ Constraints on unmeshed keypoint 14 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.302   TIME= 22:18:37
+ Constraints on unmeshed keypoint 15 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.302   TIME= 22:18:37
+ Constraints on unmeshed keypoint 16 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.302   TIME= 22:18:37
+ Constraints on unmeshed keypoint 37 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.302   TIME= 22:18:37
+ Constraints on unmeshed keypoint 38 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.302   TIME= 22:18:37
+ Selected areas attached to line 2 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.302   TIME= 22:18:37
+ Selected areas attached to line 4 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.302   TIME= 22:18:37
+ Selected areas attached to line 9 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.302   TIME= 22:18:37
+ Selected areas attached to line 10 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      16.708   TIME= 22:18:38
+ Constraints on unmeshed keypoint 5 are not transferred.                 
+
+ *** WARNING ***                         CP =      16.739   TIME= 22:18:38
+ Constraints on unmeshed keypoint 6 are not transferred.                 
+
+ *** WARNING ***                         CP =      16.755   TIME= 22:18:38
+ Constraints on unmeshed keypoint 7 are not transferred.                 
+
+ *** WARNING ***                         CP =      16.786   TIME= 22:18:38
+ Constraints on unmeshed keypoint 8 are not transferred.                 
+
+ *** WARNING ***                         CP =      16.801   TIME= 22:18:38
+ Constraints on unmeshed keypoint 13 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.817   TIME= 22:18:38
+ Constraints on unmeshed keypoint 14 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.817   TIME= 22:18:38
+ Constraints on unmeshed keypoint 15 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.817   TIME= 22:18:38
+ Constraints on unmeshed keypoint 16 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.817   TIME= 22:18:38
+ Constraints on unmeshed keypoint 37 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.817   TIME= 22:18:38
+ Constraints on unmeshed keypoint 38 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.817   TIME= 22:18:38
+ Selected areas attached to line 2 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.817   TIME= 22:18:38
+ Selected areas attached to line 4 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.817   TIME= 22:18:38
+ Selected areas attached to line 9 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      16.817   TIME= 22:18:38
+ Selected areas attached to line 10 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      17.285   TIME= 22:18:38
+ Constraints on unmeshed keypoint 5 are not transferred.                 
+
+ *** WARNING ***                         CP =      17.301   TIME= 22:18:39
+ Constraints on unmeshed keypoint 6 are not transferred.                 
+
+ *** WARNING ***                         CP =      17.316   TIME= 22:18:39
+ Constraints on unmeshed keypoint 7 are not transferred.                 
+
+ *** WARNING ***                         CP =      17.347   TIME= 22:18:39
+ Constraints on unmeshed keypoint 8 are not transferred.                 
+
+ *** WARNING ***                         CP =      17.363   TIME= 22:18:39
+ Constraints on unmeshed keypoint 13 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      17.363   TIME= 22:18:39
+ Constraints on unmeshed keypoint 14 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      17.363   TIME= 22:18:39
+ Constraints on unmeshed keypoint 15 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      17.363   TIME= 22:18:39
+ Constraints on unmeshed keypoint 16 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      17.363   TIME= 22:18:39
+ Constraints on unmeshed keypoint 37 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      17.363   TIME= 22:18:39
+ Constraints on unmeshed keypoint 38 are not transferred.                
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      17.363   TIME= 22:18:39
+ Selected areas attached to line 2 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      17.379   TIME= 22:18:39
+ Selected areas attached to line 4 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      17.379   TIME= 22:18:39
+ Selected areas attached to line 9 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      17.379   TIME= 22:18:39
+ Selected areas attached to line 10 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      43.649   TIME= 22:26:08
+ Constraints on unmeshed keypoint 5 are not transferred.                 
+
+ *** WARNING ***                         CP =      43.665   TIME= 22:26:08
+ Constraints on unmeshed keypoint 6 are not transferred.                 
+
+ *** WARNING ***                         CP =      43.665   TIME= 22:26:08
+ Constraints on unmeshed keypoint 7 are not transferred.                 
+
+ *** WARNING ***                         CP =      43.696   TIME= 22:26:08
+ Constraints on unmeshed keypoint 8 are not transferred.                 
+
+ *** WARNING ***                         CP =      43.711   TIME= 22:26:08
+ Selected areas attached to line 2 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      43.743   TIME= 22:26:08
+ Selected areas attached to line 4 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      43.743   TIME= 22:26:08
+ Selected areas attached to line 9 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      43.743   TIME= 22:26:08
+ Selected areas attached to line 10 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      45.911   TIME= 22:26:10
+ Constraints on unmeshed keypoint 5 are not transferred.                 
+
+ *** WARNING ***                         CP =      45.958   TIME= 22:26:11
+ Constraints on unmeshed keypoint 6 are not transferred.                 
+
+ *** WARNING ***                         CP =      45.958   TIME= 22:26:11
+ Constraints on unmeshed keypoint 7 are not transferred.                 
+
+ *** WARNING ***                         CP =      45.989   TIME= 22:26:11
+ Constraints on unmeshed keypoint 8 are not transferred.                 
+
+ *** WARNING ***                         CP =      46.036   TIME= 22:26:11
+ Selected areas attached to line 2 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      46.067   TIME= 22:26:11
+ Selected areas attached to line 4 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      46.067   TIME= 22:26:11
+ Selected areas attached to line 9 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      46.067   TIME= 22:26:11
+ Selected areas attached to line 10 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      46.925   TIME= 22:26:12
+ Constraints on unmeshed keypoint 5 are not transferred.                 
+
+ *** WARNING ***                         CP =      46.925   TIME= 22:26:12
+ Constraints on unmeshed keypoint 6 are not transferred.                 
+
+ *** WARNING ***                         CP =      46.941   TIME= 22:26:12
+ Constraints on unmeshed keypoint 7 are not transferred.                 
+
+ *** WARNING ***                         CP =      46.972   TIME= 22:26:12
+ Constraints on unmeshed keypoint 8 are not transferred.                 
+
+ *** WARNING ***                         CP =      46.988   TIME= 22:26:12
+ Selected areas attached to line 2 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      47.003   TIME= 22:26:12
+ Selected areas attached to line 4 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      47.003   TIME= 22:26:12
+ Selected areas attached to line 9 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      47.003   TIME= 22:26:12
+ Selected areas attached to line 10 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** WARNING ***                         CP =      47.955   TIME= 22:26:13
+ Constraints on unmeshed keypoint 5 are not transferred.                 
+
+ *** WARNING ***                         CP =      47.970   TIME= 22:26:13
+ Constraints on unmeshed keypoint 6 are not transferred.                 
+
+ *** WARNING ***                         CP =      48.002   TIME= 22:26:13
+ Constraints on unmeshed keypoint 7 are not transferred.                 
+
+ *** WARNING ***                         CP =      48.017   TIME= 22:26:13
+ Constraints on unmeshed keypoint 8 are not transferred.                 
+
+ *** WARNING ***                         CP =      48.033   TIME= 22:26:14
+ Selected areas attached to line 2 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      48.048   TIME= 22:26:14
+ Selected areas attached to line 4 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      48.048   TIME= 22:26:14
+ Selected areas attached to line 9 are not meshed.  Surface load PRES on 
+ this line is not transferred.  Loads will be transferred to meshed      
+ areas attached to this line.                                            
+
+ *** WARNING ***   SUPPRESSED MESSAGE    CP =      48.048   TIME= 22:26:14
+ Selected areas attached to line 10 are not meshed.  Surface load PRES   
+ on this line is not transferred.  Loads will be transferred to meshed   
+ areas attached to this line.                                            
+
+ *** ERROR ***                           CP =      55.318   TIME= 22:29:46
+ This function requires defined volumes.                                 
+  No volumes are currently defined.                                      
+
+ *** ERROR ***                           CP =      59.280   TIME= 22:35:26
+ Area 3 is meshed and cannot be changed.                                 
+
+ *** ERROR ***                           CP =      59.452   TIME= 22:35:41
+ Area 3 is meshed and cannot be changed.                                 
+
+ *** ERROR ***                           CP =      59.530   TIME= 22:35:51
+ This function requires defined volumes.                                 
+  No volumes are currently defined.                                      
+
+ *** WARNING ***                         CP =     105.550   TIME= 22:52:25
+ The /BATCH command must be the first line of input.  The /BATCH command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =     105.753   TIME= 22:52:26
+ User Interface mode is already on.  Command ignored.                    
+
+ *** WARNING ***                         CP =     106.502   TIME= 22:52:27
+ Invalid UNITS Label.  Valid units are:                                  
+  USER SI CGS BFT BIN MKS MPA and UMKS.                                  
+
+ *** WARNING ***                         CP =     120.261   TIME= 22:52:41
+ Some of the requested areas to be operated on were also included in the 
+ selected set to be subtracted.  These areas have been removed from the  
+ area to be subtracted list.                                             
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       22:53:18
+
+ *** WARNING ***                         CP =       0.359   TIME= 22:53:19
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** WARNING ***                         CP =       1.591   TIME= 22:55:01
+ User Interface mode is already on.  Command ignored.                    
+
+ *** WARNING ***                         CP =       1.654   TIME= 22:55:01
+ Invalid UNITS Label.  Valid units are:                                  
+  USER SI CGS BFT BIN MKS MPA and UMKS.                                  
+
+ *** WARNING ***                         CP =       3.276   TIME= 22:55:02
+ Some of the requested areas to be operated on were also included in the 
+ selected set to be subtracted.  These areas have been removed from the  
+ area to be subtracted list.                                             
+
+ *** ERROR ***                           CP =      19.360   TIME= 22:59:15
+ There is at least 1 small equation solver pivot term (e.g., at the UY   
+ degree of freedom of node 72).  Please check for an insufficiently      
+ constrained model.                                                      
+
+ *** ERROR ***                           CP =      21.216   TIME= 23:00:57
+ Boolean operation failed.  Try adjusting the tolerance value on the     
+ BTOL command to some fraction of the minimum keypoint distance.Model    
+ Size (current problem) 5.590170e-01, current BTOL setting               
+ 1.000000e-05, minimum KPT distance 1.060660e-01.                        
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       01:50:47
+
+ *** WARNING ***                         CP =       0.296   TIME= 01:50:49
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       08:27:28
+
+ *** WARNING ***                         CP =       0.437   TIME= 08:27:35
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:02:26
+
+ *** WARNING ***                         CP =       0.390   TIME= 09:02:28
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
