@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-import quaternion  # noqa
 
 time = 100
 
@@ -63,23 +62,48 @@ e1 = np.array([1, 0, 0])
 e2 = np.array([0, 1, 0])
 e3 = np.array([0, 0, 1])
 
+# Define the quaternion multiplication function
+def multiply_quaternions(q1, q2):
+    q = np.zeros(4)
+    q[0] = q1[0]*q2[0] - q1[1]*q2[1] - q1[2]*q2[2] - q1[3]*q2[3]
+    q[1] = q1[0]*q2[1] + q1[1]*q2[0] + q1[2]*q2[3] - q1[3]*q2[2]
+    q[2] = q1[0]*q2[2] + q1[2]*q2[0] + q1[3]*q2[1] - q1[1]*q2[3]
+    q[3] = q1[0]*q2[3] + q1[3]*q2[0] + q1[1]*q2[2] - q1[2]*q2[1]
+    return q
+
+# Define the 3 quaternion multiplication function
+def multiply_3_quaternions(q1, q2, q3):
+    q12 = multiply_quaternions(q1, q2)
+    q123 = multiply_quaternions(q12, q3)
+    return q123
+
+def quat_inverse(q):
+    """
+    Returns the inverse of a quaternion.
+    """
+    w, x, y, z = q
+    mag_sq = w*w + x*x + y*y + z*z
+    if mag_sq == 0.0:
+        raise ValueError("Cannot invert quaternion with zero magnitude.")
+    return (w/mag_sq, -x/mag_sq, -y/mag_sq, -z/mag_sq)
+
+def get_vector_from_quaternion(q):
+    # # ensure the input quaternion has a norm of 1
+    # q_norm = np.linalg.norm(q)
+    # if q_norm == 0:
+    #     return np.array([0, 0, 0])
+    # q_normalized = q / q_norm
+    
+    # # extract the vector from the quaternion
+    # vector = q_normalized[1:] / np.sqrt(1 - q_normalized[0]**2)
+    
+    return np.array([q[1], q[2], q[3]])
 
 # program
 states = []
 
 num_steps = int(time / dt)
-for i in range(num_steps):
-
-    currStep = i
-
-    # вивід поточного стану кожну секунду
-    if (i % (num_steps / time) == 0):
-        t = i / (num_steps / time)
-    print(f'{t} [{x} {y} {z}] [{psi}, {teta}, {gamma}]')  # noqa
-    states.append([x, y, z, vx, vy, vz, psi, teta, gamma, Om1, Om2, Om3, omega0, omega1, omega2, omega3, omega4, omega5, eps0, eps1, eps2, eps3, eps4, eps5])  # noqa
-
-    if np.isnan(x):
-        break
+for currStep in range(num_steps):
 
     # Алгоритм використання моделі (1)-(12)
     # 1
@@ -90,58 +114,61 @@ for i in range(num_steps):
         Kf * omega2 ** 2 * e2,
         Kf * omega3 ** 2 * e2,
         Kf * omega4 ** 2 * e2,
-        Kf * omega5 ** 2 * e3
+        -Kf * omega5 ** 2 * e3
     ])
 
     Fe_zsk = np.sum(F, axis=0)  # Сумарний вектор
 
     # кватерніон орієнтації ЗСК відносно ІСК
-    Lam_psi = np.quaternion(
+    Lam_psi = np.array([
         np.cos(psi/2),
         0,
-        np.sin(psi/2),
+        -np.sin(psi/2),
         0
-    )
-    Lam_teta = np.quaternion(
+    ])
+    Lam_teta = np.array([
         np.cos(teta/2),
         0,
         0,
         np.sin(teta/2)
-    )
-    Lam_gamma = np.quaternion(
+    ])
+    Lam_gamma = np.array([
         np.cos(gamma/2),
         np.sin(gamma/2),
         0,
         0
-    )
-    Lam = Lam_psi * Lam_teta * Lam_gamma
+    ])
+    Lam = multiply_3_quaternions(Lam_psi, Lam_teta, Lam_gamma)
+    Lam_ = quat_inverse(Lam)
 
     # 4
-    Phiez = np.quaternion(
+    Phiez = np.array([
         0,
         Fe_zsk[0],
         Fe_zsk[1],
         Fe_zsk[2]
-    )
-    Fe = (Lam * Phiez * Lam.inverse()).vec
+    ])
+    Fe_quat = multiply_3_quaternions(Lam, Phiez, Lam_)
+    Fe = get_vector_from_quaternion(Fe_quat)
 
     # 5
-    v = np.quaternion(0, vx, vy, vz)
-    v_zsk = (Lam.inverse() * v * Lam).vec
+    v = np.array([0, vx, vy, vz])
+    v_quat = multiply_3_quaternions(Lam_, v, Lam)
+    v_zsk = get_vector_from_quaternion(v_quat)
 
     Fs_zsk = np.array([
         -Ks[0] * v_zsk[0] ** 2 * np.sign(v_zsk[0]),
         -Ks[1] * v_zsk[1] ** 2 * np.sign(v_zsk[1]),
         -Ks[2] * v_zsk[2] ** 2 * np.sign(v_zsk[2])
     ])
-    Phis_zsk = np.quaternion(
+    Phis_zsk = np.array([
         0,
         Fs_zsk[0],
         Fs_zsk[1],
         Fs_zsk[2]
-    )
-
-    Fs = (Lam * Phis_zsk * Lam.inverse()).vec
+    ])
+    Fs_quat = multiply_3_quaternions(Lam, Phis_zsk, Lam_)
+    Fs = get_vector_from_quaternion(Fs_quat)
 
     # 6
     # Вектор сумарного кінетичного моменту «МК + ротори з гвинтами»
@@ -161,7 +188,7 @@ for i in range(num_steps):
         J * (
             eps1 - eps2 + eps3 - eps4
         ) + J0 * eps0,
-        J * eps5
+        -J * eps5
     ])
 
     # 8
@@ -175,7 +202,7 @@ for i in range(num_steps):
         -Km * omega2 ** 2 * e2,
         Km * omega3 ** 2 * e2,
         -Km * omega4 ** 2 * e2,
-        Km * omega5 ** 2 * e3
+        -Km * omega5 ** 2 * e3
     ])
 
     # 10
@@ -183,15 +210,20 @@ for i in range(num_steps):
 
     # На кожному кроці інтегрування обчислювати праві частини (управління)
     # диференціальних рівнянь (13)-(18) послідовно за формулами (32), (33)
-    b = 0.1
-    k0 = -b ** 2
+    b = 0.5
+    k0 = -(b ** 2)
     k1 = -2 * b
 
-    dR_isk = np.quaternion(0, x - 0, 0, z - 0)
+    dR_isk = np.array([0, x - 0, 0, z - 0])
 
-    dR_zsk = (Lam.inverse() * dR_isk * Lam).vec
+    dR_zsk_quat = multiply_3_quaternions(Lam_, dR_isk, Lam)
+    dR_zsk = get_vector_from_quaternion(dR_zsk_quat)
 
     gamma_star = (m * (k1 * v_zsk[2] + k0 * dR_zsk[2]) - Fs_zsk[2] + c[5] * omega5**2) / (-Gy * m)  # noqa
+
+    # b = 0.1
+    # k0 = 0
+    # k1 = -b
 
     teta_star = -(m * (k1 * v_zsk[0] + k0 * dR_zsk[0]) - Fs_zsk[0]) / (-Gy * m)
 
@@ -200,9 +232,10 @@ for i in range(num_steps):
 
     # (23), (25), (27), (28) з роз'ясненнями під формулами;  (19) - (22).
     # 23
-    vx_ = Fe[0] / m + Gx + Fs[0] / m
-    vy_ = Fe[1] / m + Gx + Fs[1] / m
-    vz_ = Fe[2] / m + Gx + Fs[2] / m
+    vy_ = Fe[1] / m + Gy + Fs[1] / m
+
+    # if currStep == 0:
+    #     vy_ = 0
 
     b = 0.5
     k0 = -b ** 3
@@ -253,7 +286,7 @@ for i in range(num_steps):
     eps0 = (ay_star * m) / (2 * c[0] * omega0)
     eps5 = (sigma_y_star * Iyy) / (3 * c[5] * omega5)
 
-    if (currStep % 2 == 0):
+    if (currStep % 2 == 1):
         eps1 = (sigma_z_star * Izz) / (c[1] * omega1 + c[2] * omega2 + c[3] * omega3 + c[4] * omega4) # noqa
         eps2 = eps1
         eps3 = -eps1
@@ -309,6 +342,9 @@ for i in range(num_steps):
     omega4_dot = eps4
     omega5_dot = eps5
 
+    # if currStep >= 5000:
+    #     omega1_dot += 1
+
     omega0 = omega0 + omega0_dot * dt
     omega1 = omega1 + omega1_dot * dt
     omega2 = omega2 + omega2_dot * dt
@@ -316,9 +352,21 @@ for i in range(num_steps):
     omega4 = omega4 + omega4_dot * dt
     omega5 = omega5 + omega5_dot * dt
 
+    t = (currStep+1) * dt
+
+    # вивід поточного стану кожну секунду
+    if (currStep % (1 / dt) == 0):
+        print(f'{t} [{x} {y} {z}] [{psi}, {teta}, {gamma}]')  # noqa
+
+    states.append([t, x, y, z, vx, vy, vz, np.rad2deg(psi), np.rad2deg(teta), np.rad2deg(gamma), Om1, Om2, Om3, omega0 / 2 / np.pi, omega1 / 2 / np.pi, omega2 / 2 / np.pi, omega3 / 2 / np.pi, omega4 / 2 / np.pi, omega5 / 2 / np.pi, eps0 / 2 / np.pi, eps1 / 2 / np.pi, eps2 / 2 / np.pi, eps3 / 2 / np.pi, eps4 / 2 / np.pi, eps5 / 2 / np.pi])  # noqa
+
+    if np.isnan(x):
+        break
+
 
 # save to excel
 titles = [
+    't',
     'x',
     'y',
     'z',
@@ -350,16 +398,16 @@ df = pd.DataFrame(states, columns=titles)
 df.to_excel('out/states.xlsx', index=False)
 
 # draw plot
-position = [state[0:3] for state in states]
+position = [state[1:4] for state in states]
 pos_labels = ['x', 'y', 'z']
 
-v = [state[3:6] for state in states]
+v = [state[4:7] for state in states]
 v_labels = ['Vx', 'Vy', 'Vz']
 
-angle = [np.rad2deg(state[6:9]) for state in states]
+angle = [state[7:10] for state in states]
 angle_labels = ['psi', 'teta', 'gamma']
 
-Om = [np.rad2deg(state[9:12]) for state in states]
+Om = [state[10:13] for state in states]
 Om_labels = ['Om1', 'Om2', 'Om3']
 
 fig, axs = plt.subplots(nrows=2, ncols=2, figsize=(12, 8))
