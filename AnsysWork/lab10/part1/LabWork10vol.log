@@ -644,3 +644,25 @@ PLESOL, S,EQV, 0,1.0
 !*  
 FINISH  
 ! /EXIT,NOSAV   
+/BATCH  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:40:23
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+RESUME,'save17','db','B:\KPI\term6\AnsysWork\lab10\part1\',0,0  
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:40:46
+/SOLU   
+FINISH  
+/POST1  
+SET,LAST
+!*  
+/EFACET,1   
+PLNSOL, U,SUM, 0,1.0
+FINISH  
+! /EXIT,NOSAV   

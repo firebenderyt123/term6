@@ -87,3 +87,52 @@
  Previously saved files are unaffected.  Please send the data leading    
  to this operation to your technical support provider, as this will      
  allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       02:04:18
+
+ *** WARNING ***                         CP =       0.312   TIME= 02:04:20
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:41:41
+
+ *** WARNING ***                         CP =       0.421   TIME= 09:41:43
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+
+ *** ERROR ***                           CP =       3.541   TIME= 09:41:58
+ An error occurred while attempting to open the results file             
+ LabWork10vol.rst.                                                       
+
+ *** ERROR ***                           CP =       3.666   TIME= 09:42:04
+ No results file available.                                              
+
+ *** ERROR ***                           CP =       4.009   TIME= 09:42:21
+ An error occurred while attempting to open the results file             
+ LabWork10vol.rst.                                                       
+
+ *** ERROR ***                           CP =       4.040   TIME= 09:42:22
+ No results file available.                                              
+
+ *** ERROR ***                           CP =       7.285   TIME= 09:44:57
+ An unexpected error ( SIG$ILL ) has occurred...  ANSYS internal data    
+ has been corrupted.  ANSYS is unable to recover and will terminate.     
+ Previously saved files are unaffected.  Please send the data leading    
+ to this operation to your technical support provider, as this will      
+ allow ANSYS, Inc to improve the program.                                
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:45:16
+
+ *** WARNING ***                         CP =       0.343   TIME= 09:45:18
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:52:45
+
+ *** WARNING ***                         CP =       0.296   TIME= 09:52:47
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   

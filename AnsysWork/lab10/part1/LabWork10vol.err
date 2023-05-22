@@ -25,3 +25,10 @@
  exceeds the number of physical CPU cores that are available (1).  As    
  the use of virtual CPU cores is not recommended, the number of CPU      
  cores used will be 1.                                                   
+/COM,ANSYS RELEASE 2022 R2           BUILD 22.2      UP20220516       09:40:03
+
+ *** WARNING ***                         CP =       0.437   TIME= 09:40:22
+ The requested number of CPU cores for shared-memory parallel (2)        
+ exceeds the number of physical CPU cores that are available (1).  As    
+ the use of virtual CPU cores is not recommended, the number of CPU      
+ cores used will be 1.                                                   
